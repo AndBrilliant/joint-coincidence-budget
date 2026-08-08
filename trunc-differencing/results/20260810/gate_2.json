@@ -1,0 +1,12 @@
+{
+  "gate": "GATE_2",
+  "passed": false,
+  "values": {
+    "yt_MZ_2L": 0.967,
+    "yt_1e10_GeV_2L": 0.531255,
+    "ratio": 0.549385,
+    "buttazzo_ratio": 0.4161,
+    "deviation_pct": 32.03
+  },
+  "benchmark_source": "Buttazzo et al., JHEP 12 (2013) 089, Table 3 / Figure 1"
+}

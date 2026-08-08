@@ -1,0 +1,170 @@
+{
+  "engine_id": "amb",
+  "spec_version": "v0.4",
+  "condition": "T1",
+  "u1_mode": "fixed",
+  "prior": "logU",
+  "calibration_seed": 271828,
+  "all_stages_validated": false,
+  "validation_record": {
+    "L2_L3": {
+      "claims": [
+        "L2",
+        "L3"
+      ],
+      "factors_tested": {
+        "1": {
+          "vacuous": false,
+          "hits": 102,
+          "N_eff": 53000000,
+          "bf_rate": 1.9245283018867923e-06,
+          "t2_analytic": 1.981152758581678e-06
+        }
+      },
+      "best_factor": 1,
+      "best_bf_hits": 102,
+      "best_bf_n": 53000000,
+      "t2_analytic": 1.981152758581678e-06,
+      "bf_rate": 1.9245283018867923e-06,
+      "bf_sigma": 1.9055669695022788e-07,
+      "within_2sigma": true,
+      "deviation_sigma": 0.2971528033448,
+      "eligible": true
+    },
+    "+Q1": {
+      "claims": [
+        "L2",
+        "L3",
+        "Q1"
+      ],
+      "factors_tested": {
+        "1": {
+          "vacuous": false,
+          "skipped": true,
+          "t2_analytic": 5.943458275745033e-10
+        },
+        "3": {
+          "vacuous": false,
+          "skipped": true,
+          "t2_analytic": 5.361195232557143e-09
+        },
+        "10": {
+          "vacuous": false,
+          "hits": 13,
+          "N_eff": 1000000000,
+          "bf_rate": 1.3e-08,
+          "t2_analytic": 4.983698327526663e-08
+        },
+        "30": {
+          "vacuous": false,
+          "hits": 100,
+          "N_eff": 518000000,
+          "bf_rate": 1.9305019305019304e-07,
+          "t2_analytic": 1.8409743087843157e-07
+        }
+      },
+      "best_factor": 30,
+      "best_bf_hits": 100,
+      "best_bf_n": 518000000,
+      "t2_analytic": 1.8409743087843157e-07,
+      "bf_rate": 1.9305019305019304e-07,
+      "bf_sigma": 1.9305019305019306e-08,
+      "within_2sigma": true,
+      "deviation_sigma": 0.4637530804972442,
+      "eligible": true
+    },
+    "+Q2": {
+      "claims": [
+        "L2",
+        "L3",
+        "Q1",
+        "Q2"
+      ],
+      "factors_tested": {
+        "1": {
+          "vacuous": false,
+          "skipped": true,
+          "t2_analytic": 3.962305517163356e-12
+        },
+        "3": {
+          "vacuous": false,
+          "skipped": true,
+          "t2_analytic": 5.943675424121002e-11
+        },
+        "10": {
+          "vacuous": false,
+          "skipped": true,
+          "t2_analytic": 1.358240634336407e-09
+        },
+        "30": {
+          "vacuous": false,
+          "skipped": true,
+          "t2_analytic": 1.5721460244867243e-08
+        },
+        "100": {
+          "vacuous": false,
+          "hits": 100,
+          "N_eff": 175000000,
+          "bf_rate": 5.714285714285714e-07,
+          "t2_analytic": 1.5864777423895036e-07
+        }
+      },
+      "best_factor": 100,
+      "best_bf_hits": 100,
+      "best_bf_n": 175000000,
+      "t2_analytic": 1.5864777423895036e-07,
+      "bf_rate": 5.714285714285714e-07,
+      "bf_sigma": 5.7142857142857144e-08,
+      "within_2sigma": false,
+      "deviation_sigma": 7.223663950818368,
+      "eligible": true
+    },
+    "+U1": {
+      "claims": [
+        "L2",
+        "L3",
+        "Q1",
+        "Q2",
+        "U1_fixed"
+      ],
+      "factors_tested": {
+        "1": {
+          "vacuous": false,
+          "hits": 0,
+          "N_eff": 1000000000,
+          "bf_rate": 0.0,
+          "t2_analytic": 0.0
+        },
+        "3": {
+          "vacuous": false,
+          "hits": 0,
+          "N_eff": 1000000000,
+          "bf_rate": 0.0,
+          "t2_analytic": 0.0
+        },
+        "10": {
+          "vacuous": false,
+          "hits": 0,
+          "N_eff": 1000000000,
+          "bf_rate": 0.0,
+          "t2_analytic": 0.0
+        },
+        "30": {
+          "vacuous": false,
+          "skipped": true,
+          "t2_analytic": 3.517785303409521e-09
+        },
+        "100": {
+          "vacuous": true
+        },
+        "300": {
+          "vacuous": true
+        },
+        "1000": {
+          "vacuous": true
+        }
+      },
+      "eligible": false
+    }
+  }
+}

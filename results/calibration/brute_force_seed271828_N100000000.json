@@ -1,0 +1,18 @@
+{
+  "engine_id": "amb",
+  "calibration_seed": 271828,
+  "N": 100000000,
+  "hits": 0,
+  "rate": 0.0,
+  "cp95_lower": 0.0,
+  "cp95_upper": 3.6888793860747784e-08,
+  "stage_counts": {
+    "L2": 10523,
+    "L3": 3,
+    "L1": 3,
+    "Q1": 0,
+    "Q2": 0,
+    "U1": 0
+  },
+  "tolerances_x100": true
+}

@@ -1,0 +1,19 @@
+{
+  "seed": 314160,
+  "cell": "T0_menu_logN",
+  "hits": 0,
+  "N_eff": 200000000,
+  "rate": 0.0,
+  "cp95_lower": 0.0,
+  "cp95_upper": 1.8444397100471783e-08,
+  "stage_counts": {
+    "L1": 2381,
+    "L2": 0,
+    "L3": 0,
+    "Q1": 0,
+    "Q2": 0,
+    "U1_menu": 0
+  },
+  "engine_id": "amb",
+  "spec_version": "v0.5"
+}

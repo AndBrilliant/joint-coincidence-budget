@@ -1,0 +1,362 @@
+{
+  "T0_fixed_logU": {
+    "engine_id": "amb",
+    "version": "v0.2",
+    "condition": "T0",
+    "u1_mode": "fixed",
+    "prior": "logU",
+    "seed": 20260811,
+    "N_eff": 2000000000,
+    "N_eff_target": 2000000000,
+    "hits": 0,
+    "rate": 0.0,
+    "cp95_lower": 0.0,
+    "cp95_upper": 1.8444397253559886e-09,
+    "cascade_order": [
+      "L2",
+      "L3",
+      "L1",
+      "Q1",
+      "Q2",
+      "U1_fixed"
+    ],
+    "stage_counts": {
+      "L2": 2081,
+      "L3": 0,
+      "L1": 0,
+      "Q1": 0,
+      "Q2": 0,
+      "U1_fixed": 0
+    },
+    "tier": "Tier-1",
+    "label": "BOUND"
+  },
+  "T0_fixed_logN": {
+    "engine_id": "amb",
+    "version": "v0.2",
+    "condition": "T0",
+    "u1_mode": "fixed",
+    "prior": "logN",
+    "seed": 314160,
+    "N_eff": 200000000,
+    "N_eff_target": 200000000,
+    "hits": 0,
+    "rate": 0.0,
+    "cp95_lower": 0.0,
+    "cp95_upper": 1.8444397100471783e-08,
+    "cascade_order": [
+      "L2",
+      "L3",
+      "L1",
+      "Q1",
+      "Q2",
+      "U1_fixed"
+    ],
+    "stage_counts": {
+      "L2": 237,
+      "L3": 0,
+      "L1": 0,
+      "Q1": 0,
+      "Q2": 0,
+      "U1_fixed": 0
+    },
+    "tier": "Tier-1",
+    "label": "BOUND"
+  },
+  "T0_fixed_linU": {
+    "engine_id": "amb",
+    "version": "v0.2",
+    "condition": "T0",
+    "u1_mode": "fixed",
+    "prior": "linU",
+    "seed": 314160,
+    "N_eff": 200000000,
+    "N_eff_target": 200000000,
+    "hits": 0,
+    "rate": 0.0,
+    "cp95_lower": 0.0,
+    "cp95_upper": 1.8444397100471783e-08,
+    "cascade_order": [
+      "L3",
+      "L1",
+      "U1_fixed",
+      "Q2"
+    ],
+    "stage_counts": {
+      "L3": 40,
+      "L1": 0,
+      "U1_fixed": 0,
+      "Q2": 0
+    },
+    "tier": "Tier-1",
+    "label": "BOUND"
+  },
+  "T0_menu_logU": {
+    "engine_id": "amb",
+    "version": "v0.2",
+    "condition": "T0",
+    "u1_mode": "menu",
+    "prior": "logU",
+    "seed": 20260811,
+    "N_eff": 2000000000,
+    "N_eff_target": 2000000000,
+    "hits": 0,
+    "rate": 0.0,
+    "cp95_lower": 0.0,
+    "cp95_upper": 1.8444397253559886e-09,
+    "cascade_order": [
+      "L2",
+      "L3",
+      "L1",
+      "Q1",
+      "Q2",
+      "U1_menu"
+    ],
+    "stage_counts": {
+      "L2": 2081,
+      "L3": 0,
+      "L1": 0,
+      "Q1": 0,
+      "Q2": 0,
+      "U1_menu": 0
+    },
+    "tier": "Tier-1",
+    "label": "BOUND"
+  },
+  "T0_menu_logN": {
+    "engine_id": "amb",
+    "version": "v0.2",
+    "condition": "T0",
+    "u1_mode": "menu",
+    "prior": "logN",
+    "seed": 314160,
+    "N_eff": 200000000,
+    "N_eff_target": 200000000,
+    "hits": 0,
+    "rate": 0.0,
+    "cp95_lower": 0.0,
+    "cp95_upper": 1.8444397100471783e-08,
+    "cascade_order": [
+      "L2",
+      "L3",
+      "L1",
+      "Q1",
+      "Q2",
+      "U1_menu"
+    ],
+    "stage_counts": {
+      "L2": 237,
+      "L3": 0,
+      "L1": 0,
+      "Q1": 0,
+      "Q2": 0,
+      "U1_menu": 0
+    },
+    "tier": "Tier-1",
+    "label": "BOUND"
+  },
+  "T0_menu_linU": {
+    "engine_id": "amb",
+    "version": "v0.2",
+    "condition": "T0",
+    "u1_mode": "menu",
+    "prior": "linU",
+    "seed": 314160,
+    "N_eff": 200000000,
+    "N_eff_target": 200000000,
+    "hits": 0,
+    "rate": 0.0,
+    "cp95_lower": 0.0,
+    "cp95_upper": 1.8444397100471783e-08,
+    "cascade_order": [
+      "L3",
+      "L1",
+      "Q2",
+      "U1_menu"
+    ],
+    "stage_counts": {
+      "L3": 40,
+      "L1": 0,
+      "Q2": 0,
+      "U1_menu": 0
+    },
+    "tier": "Tier-1",
+    "label": "BOUND"
+  },
+  "T1_fixed_logU": {
+    "engine_id": "amb",
+    "version": "v0.2",
+    "condition": "T1",
+    "u1_mode": "fixed",
+    "prior": "logU",
+    "seed": 20260811,
+    "N_eff": 2000000000,
+    "N_eff_target": 2000000000,
+    "hits": 0,
+    "rate": 0.0,
+    "cp95_lower": 0.0,
+    "cp95_upper": 1.8444397253559886e-09,
+    "cascade_order": [
+      "L2",
+      "L3",
+      "Q1",
+      "Q2",
+      "U1_fixed"
+    ],
+    "stage_counts": {
+      "L2": 4046,
+      "L3": 4046,
+      "Q1": 0,
+      "Q2": 0,
+      "U1_fixed": 0
+    },
+    "tier": "Tier-1",
+    "label": "BOUND"
+  },
+  "T1_fixed_logN": {
+    "engine_id": "amb",
+    "version": "v0.2",
+    "condition": "T1",
+    "u1_mode": "fixed",
+    "prior": "logN",
+    "seed": 314160,
+    "N_eff": 200000000,
+    "N_eff_target": 200000000,
+    "hits": 0,
+    "rate": 0.0,
+    "cp95_lower": 0.0,
+    "cp95_upper": 1.8444397100471783e-08,
+    "cascade_order": [
+      "L2",
+      "L3",
+      "Q1",
+      "Q2",
+      "U1_fixed"
+    ],
+    "stage_counts": {
+      "L2": 388,
+      "L3": 388,
+      "Q1": 0,
+      "Q2": 0,
+      "U1_fixed": 0
+    },
+    "tier": "Tier-1",
+    "label": "BOUND"
+  },
+  "T1_fixed_linU": {
+    "engine_id": "amb",
+    "version": "v0.2",
+    "condition": "T1",
+    "u1_mode": "fixed",
+    "prior": "linU",
+    "seed": 314160,
+    "N_eff": 200000000,
+    "N_eff_target": 200000000,
+    "hits": 0,
+    "rate": 0.0,
+    "cp95_lower": 0.0,
+    "cp95_upper": 1.8444397100471783e-08,
+    "cascade_order": [
+      "L2",
+      "Q2",
+      "L3",
+      "U1_fixed"
+    ],
+    "stage_counts": {
+      "L2": 403,
+      "Q2": 0,
+      "L3": 0,
+      "U1_fixed": 0
+    },
+    "tier": "Tier-1",
+    "label": "BOUND"
+  },
+  "T1_menu_logU": {
+    "engine_id": "amb",
+    "version": "v0.2",
+    "condition": "T1",
+    "u1_mode": "menu",
+    "prior": "logU",
+    "seed": 20260811,
+    "N_eff": 2000000000,
+    "N_eff_target": 2000000000,
+    "hits": 0,
+    "rate": 0.0,
+    "cp95_lower": 0.0,
+    "cp95_upper": 1.8444397253559886e-09,
+    "cascade_order": [
+      "L2",
+      "L3",
+      "Q1",
+      "Q2",
+      "U1_menu"
+    ],
+    "stage_counts": {
+      "L2": 4046,
+      "L3": 4046,
+      "Q1": 0,
+      "Q2": 0,
+      "U1_menu": 0
+    },
+    "tier": "Tier-1",
+    "label": "BOUND"
+  },
+  "T1_menu_logN": {
+    "engine_id": "amb",
+    "version": "v0.2",
+    "condition": "T1",
+    "u1_mode": "menu",
+    "prior": "logN",
+    "seed": 314160,
+    "N_eff": 200000000,
+    "N_eff_target": 200000000,
+    "hits": 0,
+    "rate": 0.0,
+    "cp95_lower": 0.0,
+    "cp95_upper": 1.8444397100471783e-08,
+    "cascade_order": [
+      "L2",
+      "L3",
+      "Q1",
+      "Q2",
+      "U1_menu"
+    ],
+    "stage_counts": {
+      "L2": 388,
+      "L3": 388,
+      "Q1": 0,
+      "Q2": 0,
+      "U1_menu": 0
+    },
+    "tier": "Tier-1",
+    "label": "BOUND"
+  },
+  "T1_menu_linU": {
+    "engine_id": "amb",
+    "version": "v0.2",
+    "condition": "T1",
+    "u1_mode": "menu",
+    "prior": "linU",
+    "seed": 314160,
+    "N_eff": 200000000,
+    "N_eff_target": 200000000,
+    "hits": 0,
+    "rate": 0.0,
+    "cp95_lower": 0.0,
+    "cp95_upper": 1.8444397100471783e-08,
+    "cascade_order": [
+      "L2",
+      "Q2",
+      "L3",
+      "U1_menu"
+    ],
+    "stage_counts": {
+      "L2": 403,
+      "Q2": 0,
+      "L3": 0,
+      "U1_menu": 0
+    },
+    "tier": "Tier-1",
+    "label": "BOUND"
+  }
+}

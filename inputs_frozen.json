@@ -1,0 +1,102 @@
+{
+  "spec_version": "v0.5-freeze",
+  "engine_id": "amb",
+  "production_seed": 20260811,
+  "prior_variant_seed": 314160,
+  "calibration_seed": 271828,
+
+  "golden_regression": {
+    "seed": 20260726,
+    "N": 10000000,
+    "expected_hits": 69,
+    "J_obs": 0.0010536,
+    "J_obs_breakdown": {
+      "lepton_kdist": 3.3049e-6,
+      "downs_kdist": 1.0503e-3
+    },
+    "leptons_obs_MeV": [0.51099895, 105.6583755, 1776.93],
+    "downs_2GeV_obs_MeV": [4.70, 93.4, 4966.0],
+    "lepton_null_range_MeV": [0.3, 2000],
+    "downs_null_range_MeV": [2, 10000],
+    "batch_size": 1000000,
+    "cp95_pooled": {
+      "k": 189,
+      "n": 30000000,
+      "f": 6.3e-6,
+      "cp95_lower": 5.43e-6,
+      "cp95_upper": 7.27e-6
+    }
+  },
+
+  "observed_side_checks": {
+    "lepton_kdist_target": 3.3049e-6,
+    "leptons_pole_MeV": [0.51099895, 105.6583755, 1776.93],
+    "U1_target": {
+      "value": 1.1414e-2,
+      "formula": "abs(9*Q_U - 8)",
+      "input_yukawas_MZ": [7.04e-6, 3.56e-3, 0.967],
+      "description": "up-type Yukawas AHS2026 common-scale at M_Z"
+    },
+    "tolerances": {
+      "b1": 3.00e-3,
+      "b2": 1.18e-2,
+      "derivation": "b1=|-2*delta_s+delta_d|, b2=|-2*delta_u+delta_d|",
+      "residuals": {
+        "delta_s": 0.0008,
+        "delta_d": 0.0046,
+        "delta_u": 0.0082,
+        "source": "P3 Table I (PDG 2026 / FLAG 2024 vintage)"
+      }
+    }
+  },
+
+  "frozen_claim_table": {
+    "L1": {"claim": "lepton kdist", "observed": 3.3049e-6, "target": "k=1", "frame": "best of {sqrt m, 1/sqrt m}", "tolerance": 3.3049e-6, "menu": "coordinate (same-draw union)"},
+    "L2": {"claim": "m2/m1 ratio", "observed": "+0.0010%", "target": 206.7703, "frame": "static, scale-free", "tolerance": 1.00e-5, "menu": "none"},
+    "L3": {"claim": "m3/m2 ratio", "observed": "+0.0021%", "target": 16.8180, "frame": "static, scale-free", "tolerance": 2.10e-5, "menu": "none"},
+    "Q1": {"claim": "ln(ms^2/(mu_star*md))", "observed": "+3.00e-3", "target": 0, "frame": "anchors from own draw", "tolerance": 3.00e-3, "menu": "own mu_star"},
+    "Q2": {"claim": "ln(mu^2/(md*twome))", "observed": "-1.18e-2", "target": 0, "frame": "anchors from own draw", "tolerance": 1.18e-2, "menu": "own floor"},
+    "U1": {"claim": "|9*Q_U - 8|", "observed": 1.1414e-2, "target": "8/9", "frame": "direct/inverse union", "tolerance": 1.1414e-2, "menu": "VARIANT: any irreducible p/q, p,q<=9, in (1/3,1] (19 targets)"}
+  },
+
+  "U1_menu_targets": {
+    "description": "Irreducible p/q with p,q <= 9 in (1/3, 1]",
+    "count": 19,
+    "fractions": [
+      "1/1", "1/2", "2/3", "3/4",
+      "2/5", "3/5", "4/5",
+      "5/6",
+      "3/7", "4/7", "5/7", "6/7",
+      "3/8", "5/8", "7/8",
+      "4/9", "5/9", "7/9", "8/9"
+    ]
+  },
+
+  "data_sources": {
+    "lepton_masses": "PDG 2024 pole masses",
+    "up_type_yukawas": "AHS2026 common-scale at M_Z",
+    "P3_residuals": "P3 Table I (PDG 2026 / FLAG 2024 vintage)",
+    "down_quark_masses": "PDG 2026 / FLAG 2024, 2-GeV scheme"
+  },
+
+  "validation_v05": {
+    "anchor_averaging": {
+      "min_lepton_samples": 10000,
+      "description": "Average quark-block probability over >=1e4 lepton draws from inflated window; anchors recomputed per draw"
+    },
+    "stage_local_inflation": {
+      "factors": [1, 3, 10, 30, 100, 300, 1000],
+      "description": "Inflate ONLY claims new to the stage under test; lepton windows at smallest factor giving >=100 lepton-stage survivors"
+    },
+    "compositional_U1": {
+      "description": "If no direct factor reaches 100 hits non-vacuously, validate (i) P(U1) singleton at factor 1, (ii) Q2^U1 pair at adaptive factor. Both within 2 Poisson sigma => VALIDATED-BY-COMPOSITION"
+    },
+    "nonvacuous_gate": {
+      "description": "Window must exclude >50% of prior mass for every claim in the stage"
+    },
+    "calibration": {
+      "seed": 271828,
+      "N_max": 1000000000
+    }
+  }
+}

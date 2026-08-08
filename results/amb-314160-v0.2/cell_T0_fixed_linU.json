@@ -1,0 +1,28 @@
+{
+  "engine_id": "amb",
+  "version": "v0.2",
+  "condition": "T0",
+  "u1_mode": "fixed",
+  "prior": "linU",
+  "seed": 314160,
+  "N_eff": 200000000,
+  "N_eff_target": 200000000,
+  "hits": 0,
+  "rate": 0.0,
+  "cp95_lower": 0.0,
+  "cp95_upper": 1.8444397100471783e-08,
+  "cascade_order": [
+    "L3",
+    "L1",
+    "U1_fixed",
+    "Q2"
+  ],
+  "stage_counts": {
+    "L3": 40,
+    "L1": 0,
+    "U1_fixed": 0,
+    "Q2": 0
+  },
+  "tier": "Tier-1",
+  "label": "BOUND"
+}

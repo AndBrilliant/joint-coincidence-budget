@@ -1,0 +1,204 @@
+{
+  "engine_id": "amb",
+  "spec_version": "v0.5",
+  "cells": {
+    "T0_fixed_logU": {
+      "hits": 0,
+      "N_eff": 2000000000,
+      "rate": 0.0,
+      "cp95_lower": 0.0,
+      "cp95_upper": 1.8444397253559886e-09,
+      "stage_counts": {
+        "L1": 22103,
+        "L2": 0,
+        "L3": 0,
+        "Q1": 0,
+        "Q2": 0,
+        "U1_fixed": 0
+      },
+      "tier": "Tier-1",
+      "type": "BOUND"
+    },
+    "T0_menu_logU": {
+      "hits": 0,
+      "N_eff": 2000000000,
+      "rate": 0.0,
+      "cp95_lower": 0.0,
+      "cp95_upper": 1.8444397253559886e-09,
+      "stage_counts": {
+        "L1": 21839,
+        "L2": 0,
+        "L3": 0,
+        "Q1": 0,
+        "Q2": 0,
+        "U1_menu": 0
+      },
+      "tier": "Tier-1",
+      "type": "BOUND"
+    },
+    "T1_fixed_logU": {
+      "hits": 0,
+      "N_eff": 2000000000,
+      "rate": 0.0,
+      "cp95_lower": 0.0,
+      "cp95_upper": 1.8444397253559886e-09,
+      "stage_counts": {
+        "L2": 3958,
+        "L3": 3958,
+        "Q1": 0,
+        "Q2": 0,
+        "U1_fixed": 0
+      },
+      "tier": "Tier-1",
+      "type": "BOUND"
+    },
+    "T1_menu_logU": {
+      "hits": 0,
+      "N_eff": 2000000000,
+      "rate": 0.0,
+      "cp95_lower": 0.0,
+      "cp95_upper": 1.8444397253559886e-09,
+      "stage_counts": {
+        "L2": 3912,
+        "L3": 3912,
+        "Q1": 0,
+        "Q2": 0,
+        "U1_menu": 0
+      },
+      "tier": "Tier-1",
+      "type": "BOUND"
+    },
+    "T0_fixed_logN": {
+      "hits": 0,
+      "N_eff": 200000000,
+      "rate": 0.0,
+      "cp95_lower": 0.0,
+      "cp95_upper": 1.8444397100471783e-08,
+      "stage_counts": {
+        "L1": 2329,
+        "L2": 0,
+        "L3": 0,
+        "Q1": 0,
+        "Q2": 0,
+        "U1_fixed": 0
+      },
+      "tier": "Tier-1",
+      "type": "BOUND"
+    },
+    "T0_menu_logN": {
+      "hits": 0,
+      "N_eff": 200000000,
+      "rate": 0.0,
+      "cp95_lower": 0.0,
+      "cp95_upper": 1.8444397100471783e-08,
+      "stage_counts": {
+        "L1": 2381,
+        "L2": 0,
+        "L3": 0,
+        "Q1": 0,
+        "Q2": 0,
+        "U1_menu": 0
+      },
+      "tier": "Tier-1",
+      "type": "BOUND"
+    },
+    "T1_fixed_logN": {
+      "hits": 0,
+      "N_eff": 200000000,
+      "rate": 0.0,
+      "cp95_lower": 0.0,
+      "cp95_upper": 1.8444397100471783e-08,
+      "stage_counts": {
+        "L2": 393,
+        "L3": 393,
+        "Q1": 0,
+        "Q2": 0,
+        "U1_fixed": 0
+      },
+      "tier": "Tier-1",
+      "type": "BOUND"
+    },
+    "T1_menu_logN": {
+      "hits": 0,
+      "N_eff": 200000000,
+      "rate": 0.0,
+      "cp95_lower": 0.0,
+      "cp95_upper": 1.8444397100471783e-08,
+      "stage_counts": {
+        "L2": 397,
+        "L3": 397,
+        "Q1": 0,
+        "Q2": 0,
+        "U1_menu": 0
+      },
+      "tier": "Tier-1",
+      "type": "BOUND"
+    },
+    "T0_fixed_linU": {
+      "hits": 0,
+      "N_eff": 200000000,
+      "rate": 0.0,
+      "cp95_lower": 0.0,
+      "cp95_upper": 1.8444397100471783e-08,
+      "stage_counts": {
+        "L1": 170,
+        "L2": 0,
+        "L3": 0,
+        "Q1": 0,
+        "Q2": 0,
+        "U1_fixed": 0
+      },
+      "tier": "Tier-1",
+      "type": "BOUND"
+    },
+    "T0_menu_linU": {
+      "hits": 0,
+      "N_eff": 200000000,
+      "rate": 0.0,
+      "cp95_lower": 0.0,
+      "cp95_upper": 1.8444397100471783e-08,
+      "stage_counts": {
+        "L1": 170,
+        "L2": 0,
+        "L3": 0,
+        "Q1": 0,
+        "Q2": 0,
+        "U1_menu": 0
+      },
+      "tier": "Tier-1",
+      "type": "BOUND"
+    },
+    "T1_fixed_linU": {
+      "hits": 0,
+      "N_eff": 200000000,
+      "rate": 0.0,
+      "cp95_lower": 0.0,
+      "cp95_upper": 1.8444397100471783e-08,
+      "stage_counts": {
+        "L2": 392,
+        "L3": 392,
+        "Q1": 0,
+        "Q2": 0,
+        "U1_fixed": 0
+      },
+      "tier": "Tier-1",
+      "type": "BOUND"
+    },
+    "T1_menu_linU": {
+      "hits": 0,
+      "N_eff": 200000000,
+      "rate": 0.0,
+      "cp95_lower": 0.0,
+      "cp95_upper": 1.8444397100471783e-08,
+      "stage_counts": {
+        "L2": 403,
+        "L3": 403,
+        "Q1": 0,
+        "Q2": 0,
+        "U1_menu": 0
+      },
+      "tier": "Tier-1",
+      "type": "BOUND"
+    }
+  }
+}

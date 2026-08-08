@@ -1,0 +1,205 @@
+{
+  "engine_id": "amb",
+  "spec_version": "v0.4",
+  "test": "density_derivation_unit_test",
+  "L": 8.804875263868018,
+  "u_obs": 5.331608515299085,
+  "v_obs": 2.8224497414107064,
+  "N_draws": 100000000,
+  "seed": 20260811,
+  "all_passed": false,
+  "results": [
+    {
+      "rect": 1,
+      "description": "near origin, 0.1\u00d70.1",
+      "u_range": [
+        0.0,
+        0.1
+      ],
+      "v_range": [
+        0.0,
+        0.1
+      ],
+      "p_analytic": 0.0007651457656898818,
+      "expected": 76514.57656898818,
+      "observed": 77151,
+      "sigma": 276.6126833118615,
+      "deviation": 636.423431011819,
+      "deviation_sigma": 2.300774582683528,
+      "pass": false
+    },
+    {
+      "rect": 2,
+      "description": "near observed \u00b10.05",
+      "u_range": [
+        5.2816085152990855,
+        5.381608515299085
+      ],
+      "v_range": [
+        2.7724497414107065,
+        2.872449741410706
+      ],
+      "p_analytic": 5.7205860184238785e-05,
+      "expected": 5720.586018423878,
+      "observed": 5608,
+      "sigma": 75.63455571644404,
+      "deviation": 112.58601842387816,
+      "deviation_sigma": 1.4885526510655545,
+      "pass": true
+    },
+    {
+      "rect": 3,
+      "description": "observed \u00b10.01",
+      "u_range": [
+        5.3216085152990855,
+        5.341608515299085
+      ],
+      "v_range": [
+        2.8124497414107066,
+        2.832449741410706
+      ],
+      "p_analytic": 2.2882344073695126e-06,
+      "expected": 228.82344073695126,
+      "observed": 236,
+      "sigma": 15.12691114328868,
+      "deviation": 7.176559263048745,
+      "deviation_sigma": 0.4744233105535727,
+      "pass": true
+    },
+    {
+      "rect": 4,
+      "description": "near edge, high u",
+      "u_range": [
+        7.804875263868018,
+        8.304875263868018
+      ],
+      "v_range": [
+        0.0,
+        0.3
+      ],
+      "p_analytic": 0.0007910867970495187,
+      "expected": 79108.67970495186,
+      "observed": 79190,
+      "sigma": 281.26265252420535,
+      "deviation": 81.32029504813545,
+      "deviation_sigma": 0.2891258200060424,
+      "pass": true
+    },
+    {
+      "rect": 5,
+      "description": "mid-range (2-3, 1-2)",
+      "u_range": [
+        2.0,
+        3.0
+      ],
+      "v_range": [
+        1.0,
+        2.0
+      ],
+      "p_analytic": 0.04223414869684238,
+      "expected": 4223414.869684238,
+      "observed": 4225109,
+      "sigma": 2055.094856614711,
+      "deviation": 1694.1303157620132,
+      "deviation_sigma": 0.8243562628309515,
+      "pass": true
+    },
+    {
+      "rect": 6,
+      "description": "near v-edge",
+      "u_range": [
+        0.0,
+        0.5
+      ],
+      "v_range": [
+        7.804875263868018,
+        8.304875263868018
+      ],
+      "p_analytic": 0.0010987316625687882,
+      "expected": 109873.16625687882,
+      "observed": 109783,
+      "sigma": 331.4712148239705,
+      "deviation": 90.16625687881606,
+      "deviation_sigma": 0.27201836191628076,
+      "pass": true
+    },
+    {
+      "rect": 7,
+      "description": "mid-simplex (1-2, 2-3)",
+      "u_range": [
+        1.0,
+        2.0
+      ],
+      "v_range": [
+        2.0,
+        3.0
+      ],
+      "p_analytic": 0.04223414869684238,
+      "expected": 4223414.869684238,
+      "observed": 4220689,
+      "sigma": 2055.094856614711,
+      "deviation": 2725.869684237987,
+      "deviation_sigma": 1.3263960422382746,
+      "pass": true
+    },
+    {
+      "rect": 8,
+      "description": "diagonal (3-4, 3-4)",
+      "u_range": [
+        3.0,
+        4.0
+      ],
+      "v_range": [
+        3.0,
+        4.0
+      ],
+      "p_analytic": 0.015864588795191734,
+      "expected": 1586458.8795191734,
+      "observed": 1586345,
+      "sigma": 1259.5470930136648,
+      "deviation": 113.87951917340979,
+      "deviation_sigma": 0.09041306974948837,
+      "pass": true
+    },
+    {
+      "rect": 9,
+      "description": "wide u, thin v",
+      "u_range": [
+        0.5,
+        2.5
+      ],
+      "v_range": [
+        0.0,
+        0.5
+      ],
+      "p_analytic": 0.06201131862308035,
+      "expected": 6201131.862308035,
+      "observed": 6199455,
+      "sigma": 2490.207192646434,
+      "deviation": 1676.8623080346733,
+      "deviation_sigma": 0.6733826458241856,
+      "pass": true
+    },
+    {
+      "rect": 10,
+      "description": "near boundary, inside",
+      "u_range": [
+        6.804875263868018,
+        7.804875263868018
+      ],
+      "v_range": [
+        5.804875263868018,
+        6.304875263868018
+      ],
+      "p_analytic": 0.0,
+      "expected": 0.0,
+      "observed": 0,
+      "sigma": 1.0,
+      "deviation": 0.0,
+      "deviation_sigma": 0.0,
+      "pass": true
+    }
+  ],
+  "analytic_density_formula": "f(u,v) = 6/L\u00b3 \u00d7 max(0, L-u-v) for u\u22650, v\u22650, u+v\u2264L",
+  "derivation": "f_Y(1)Y(2)Y(3)(y1,y2,y3)=6/L\u00b3; transform u=y2-y1, v=y3-y2; integrate out y1 giving width L-u-v"
+}

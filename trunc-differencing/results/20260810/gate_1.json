@@ -1,0 +1,17 @@
+{
+  "gate": "GATE_1",
+  "passed": true,
+  "subgates": {
+    "1a_residual_pct": 7.93,
+    "1a_pass": true,
+    "1b_mu_89_TeV": 2.81,
+    "1b_pass": true
+  },
+  "values": {
+    "9QU_MZ_1L": 7.988586,
+    "9QU_1TeV_1L": 7.996732,
+    "9QU_3TeV_1L": 8.000095,
+    "drift_1L": 0.011509,
+    "drift_tabulated": 0.0125
+  }
+}

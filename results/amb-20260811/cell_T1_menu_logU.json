@@ -1,0 +1,30 @@
+{
+  "engine_id": "amb",
+  "condition": "T1",
+  "u1_mode": "menu",
+  "prior": "logU",
+  "seed": 20260811,
+  "N_eff": 2000000000,
+  "N_eff_target": 2000000000,
+  "hits": 0,
+  "rate": 0.0,
+  "cp95_lower": 0.0,
+  "cp95_upper": 1.8444397253559886e-09,
+  "cascade_order": [
+    "L2",
+    "L3",
+    "Q1",
+    "Q2",
+    "U1_fixed",
+    "U1_menu"
+  ],
+  "stage_counts": {
+    "L2": 0,
+    "L3": 0,
+    "Q1": 0,
+    "Q2": 0,
+    "U1_menu": 0
+  },
+  "tier": "Tier-1",
+  "label": "BOUND"
+}

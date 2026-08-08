@@ -1,0 +1,26 @@
+{
+  "engine_id": "amb",
+  "spec_version": "v0.3",
+  "t0": {
+    "p_lepton_block": 4.5931866553194e-12,
+    "p_l2l3_no_l1": 4.8052922554761155e-12,
+    "f_l1_within_l2l3": 0.95586,
+    "p_quark_block_fixed_obs": 0.0,
+    "p_quark_block_menu_obs": 0.0,
+    "p_quark_block_fixed_integrated": 0.0,
+    "p_quark_block_menu_integrated": 1.5000000000000002e-07,
+    "p_joint_fixed": 0.0,
+    "p_joint_menu": 6.8897799829791e-19,
+    "cp95_upper_bound_2e9": 1.844e-09
+  },
+  "t1": {
+    "p_lepton_block": 1.6000003200148354e-06,
+    "delta_ln_r": 1.473654754260745e-05,
+    "r_center": 0.0002875651758002062,
+    "p_quark_block_fixed_integrated": 0.0,
+    "p_quark_block_menu_integrated": 3.3333333333333334e-08,
+    "p_joint_fixed": 0.0,
+    "p_joint_menu": 5.333334400049452e-14,
+    "cp95_upper_bound_2e9": 1.844e-09
+  }
+}

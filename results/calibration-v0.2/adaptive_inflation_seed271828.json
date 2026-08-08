@@ -1,0 +1,29 @@
+{
+  "engine_id": "amb",
+  "version": "v0.2",
+  "calibration_seed": 271828,
+  "N_calib": 100000000,
+  "stage_pairs": {
+    "L2_L3": {
+      "factor": 1000,
+      "hits": 470,
+      "eligible": true
+    },
+    "+Q1": {
+      "factor": 1000,
+      "hits": 140,
+      "eligible": true
+    },
+    "+Q2": {
+      "factor": 1000,
+      "hits": 140,
+      "eligible": true
+    },
+    "+U1": {
+      "factor": 1000,
+      "hits": 140,
+      "eligible": true
+    }
+  },
+  "tier2_eligible": true
+}
