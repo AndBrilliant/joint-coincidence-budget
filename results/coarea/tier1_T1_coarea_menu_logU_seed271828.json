@@ -1,0 +1,33 @@
+{
+  "engine_id": "amb-coarea",
+  "spec_version": "v1.0-coarea",
+  "condition": "T1_coarea",
+  "u1_mode": "menu",
+  "prior": "logU",
+  "seed": 271828,
+  "N_accepted": 1583937415,
+  "N_attempted": 2000000000,
+  "acceptance_rate": 0.7919687075,
+  "ESS": 1583937019.3202078,
+  "weighted_rate": 0.0,
+  "unweighted_rate": 0.0,
+  "joint_hits_unweighted": 0,
+  "joint_hits_weighted": 0.0,
+  "cp95_lower": 0.0,
+  "cp95_upper": 2.3289300542334646e-09,
+  "stage_hits_unweighted": {
+    "L2": 3975,
+    "L3": 3975,
+    "Q1": 0,
+    "Q2": 0,
+    "U1_menu": 0
+  },
+  "stage_hits_weighted": {
+    "L2": 0.005019151854708138,
+    "L3": 0.005019151854708138,
+    "Q1": 0.0,
+    "Q2": 0.0,
+    "U1_menu": 0.0
+  },
+  "elapsed_s": 243.255863904953
+}

@@ -1,0 +1,41 @@
+{
+  "gate": "C1",
+  "passed": false,
+  "comparison": {
+    "coarea": {
+      "median_log10r": -2.3325155264491504,
+      "mc_error": 0.004363692742832873,
+      "eps_reference": 0.0001,
+      "shell_N": 24656,
+      "shell_fraction": 0.00024656,
+      "convergence_spread": 0.0015653561588141475
+    },
+    "specified_sheet": {
+      "median_log10r": -3.4182975874609403,
+      "mc_error": 0.00363929104832477,
+      "N_samples": 200000,
+      "acceptance_rate": 0.2,
+      "within_2sigma_of_coarea": false
+    },
+    "alt_sheet": {
+      "median_log10r": -4.17876133326389,
+      "mc_error": 0.004166110656205407,
+      "N_samples": 200000,
+      "acceptance_rate": 0.2,
+      "within_2sigma_of_coarea": false
+    },
+    "gate_C1_passed": false,
+    "grad_T1_specified": {
+      "mean": 0.13608276348795428,
+      "std": 7.524121381694457e-17,
+      "cv": 5.529077444374852e-16
+    },
+    "grad_T1_alt": {
+      "mean": 0.13608276348795428,
+      "std": 6.916539637421631e-17,
+      "cv": 5.082597869225272e-16
+    }
+  },
+  "engine_id": "amb-coarea",
+  "spec_version": "v1.0-coarea"
+}

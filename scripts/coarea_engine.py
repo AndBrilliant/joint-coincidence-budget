@@ -863,11 +863,13 @@ def run_gate_C1(seed=271828, N_T0_shell=100_000_000, eps_values=None,
     t1_attempted = 0
     batch_size = 1_000_000
 
-    while len(t1_specified_samples) < N_t1_specified:
+    n_spec_have = 0
+    while n_spec_have < N_t1_specified:
         lep, attempted = sample_t1_specified(rng_t1, batch_size)
         t1_attempted += attempted
         if len(lep) > 0:
             t1_specified_samples.append(lep)
+            n_spec_have += len(lep)
 
     t1_spec = np.vstack(t1_specified_samples)[:N_t1_specified]
     t1_spec_r = t1_spec[:, 0] / t1_spec[:, 2]
@@ -891,11 +893,13 @@ def run_gate_C1(seed=271828, N_T0_shell=100_000_000, eps_values=None,
     t1_alt_samples = []
     t1_alt_attempted = 0
 
-    while len(t1_alt_samples) < N_t1_alt:
+    n_alt_have = 0
+    while n_alt_have < N_t1_alt:
         lep, attempted = sample_t1_alt_sheet(rng_alt, batch_size)
         t1_alt_attempted += attempted
         if len(lep) > 0:
             t1_alt_samples.append(lep)
+            n_alt_have += len(lep)
 
     t1_alt = np.vstack(t1_alt_samples)[:N_t1_alt]
     t1_alt_r = t1_alt[:, 0] / t1_alt[:, 2]
@@ -1363,7 +1367,7 @@ def main():
         # Save C1 results
         c1_out = os.path.join(args.outdir, "gate_C1.json")
         with open(c1_out, "w") as f:
-            json.dump({"gate": "C1", "passed": gate_c1_passed,
+            json.dump({"gate": "C1", "passed": bool(gate_c1_passed),
                        "comparison": gate_c1_data,
                        "engine_id": "amb-coarea", "spec_version": "v1.0-coarea"},
                       f, indent=2)
@@ -1387,7 +1391,7 @@ def main():
 
         c2_out = os.path.join(args.outdir, "gate_C2.json")
         with open(c2_out, "w") as f:
-            json.dump({"gate": "C2", "passed": gate_c2_passed,
+            json.dump({"gate": "C2", "passed": bool(gate_c2_passed),
                        "engine_id": "amb-coarea", "spec_version": "v1.0-coarea"},
                       f, indent=2)
         print(f"Saved GATE C2: {c2_out}")

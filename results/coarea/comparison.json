@@ -1,0 +1,28 @@
+{
+  "constructions": {
+    "specified_sheet_m3_r": {
+      "measure": "logU(m3, m1/m3) on {Q=2/3}",
+      "median_log10r": -3.4182975874609403,
+      "cp95_upper": 1.8444397253559886e-09,
+      "N_eff": 2000000000,
+      "hits": 0
+    },
+    "alt_sheet_m2_r2": {
+      "measure": "logU(m2, m1/m2) on {Q=2/3}",
+      "median_log10r": -4.17876133326389,
+      "cp95_upper": 1.8444397100471783e-08,
+      "N_eff": 200000000,
+      "hits": 0
+    },
+    "coarea_derived": {
+      "measure": "T0 conditional via co-area (1/|\u2207Q| on {Q=2/3})",
+      "median_log10r": -2.3325155264491504,
+      "cp95_upper": 2.3289300542334646e-09,
+      "N_eff": 1583937415,
+      "hits": 0
+    }
+  },
+  "verdict": "The joint conclusion IS sheet-dependent at the precision of this study. The co-area derived conditional differs from the specified sheet measure(s) in its scalar distribution. The bounds are all zero-hit (CP95 upper limits) and differ only through N_eff, not through the measure shape directly.",
+  "measures_differ_specified": true,
+  "measures_differ_alt": true
+}

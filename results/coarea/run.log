@@ -1,0 +1,78 @@
+
+======================================================================
+CO-AREA ENGINE v1.0 — T1 as Derived Conditional
+Spec: specs/SPEC_COAREA.md
+Mode: full | Seed: 271828
+Output: results/coarea
+======================================================================
+======================================================================
+GATE C1: Co-Area Conditional vs Specified T1 Sheet Measure
+======================================================================
+
+──────────────────────────────────────────────────
+Part 1: Epsilon-shell sampling from T0
+──────────────────────────────────────────────────
+
+  Epsilon = 0.003
+  [eps=0.003] drawn 50,000,000, shell=372647, rate=15,616,671/s
+  [eps=0.003] drawn 100,000,000, shell=745228, rate=15,614,298/s
+  Shell samples: 745228, median log10(r) = -2.332195
+
+  Epsilon = 0.001
+  [eps=0.001] drawn 50,000,000, shell=123866, rate=15,851,088/s
+  [eps=0.001] drawn 100,000,000, shell=248194, rate=15,880,147/s
+  Shell samples: 248194, median log10(r) = -2.331348
+
+  Epsilon = 0.0003
+  [eps=0.0003] drawn 50,000,000, shell=36915, rate=15,522,652/s
+  [eps=0.0003] drawn 100,000,000, shell=74255, rate=15,642,644/s
+  Shell samples: 74255, median log10(r) = -2.328533
+
+  Epsilon = 0.0001
+  [eps=0.0001] drawn 50,000,000, shell=12243, rate=15,799,786/s
+  [eps=0.0001] drawn 100,000,000, shell=24656, rate=15,796,804/s
+
+======================================================================
+CO-AREA ENGINE v1.0 — T1 as Derived Conditional
+Spec: specs/SPEC_COAREA.md
+Mode: full | Seed: 271828
+Output: results/coarea
+======================================================================
+======================================================================
+GATE C1: Co-Area Conditional vs Specified T1 Sheet Measure
+======================================================================
+
+──────────────────────────────────────────────────
+Part 1: Epsilon-shell sampling from T0
+──────────────────────────────────────────────────
+
+  Epsilon = 0.003
+  [eps=0.003] drawn 50,000,000, shell=372647, rate=16,037,916/s
+  [eps=0.003] drawn 100,000,000, shell=745228, rate=16,024,161/s
+  Shell samples: 745228, median log10(r) = -2.332195
+
+  Epsilon = 0.001
+  [eps=0.001] drawn 50,000,000, shell=123866, rate=16,310,614/s
+  [eps=0.001] drawn 100,000,000, shell=248194, rate=16,465,230/s
+  Shell samples: 248194, median log10(r) = -2.331348
+
+  Epsilon = 0.0003
+  [eps=0.0003] drawn 50,000,000, shell=36915, rate=16,723,762/s
+  [eps=0.0003] drawn 100,000,000, shell=74255, rate=16,752,957/s
+  Shell samples: 74255, median log10(r) = -2.328533
+
+  Epsilon = 0.0001
+  [eps=0.0001] drawn 50,000,000, shell=12243, rate=16,823,132/s
+  [eps=0.0001] drawn 100,000,000, shell=24656, rate=16,950,471/s
+  Shell samples: 24656, median log10(r) = -2.332516
+
+  Convergence of median log10(r) with eps:
+    eps=1e-04: median=-2.332516 ± 0.004470 (MC), N_shell=24656
+    eps=3e-04: median=-2.328533 ± 0.002687 (MC), N_shell=74255
+    eps=1e-03: median=-2.331348 ± 0.001396 (MC), N_shell=248194
+    eps=3e-03: median=-2.332195 ± 0.000781 (MC), N_shell=745228
+  Converged value (smallest 3 eps): -2.330692 ± 0.001565 (spread)
+
+──────────────────────────────────────────────────
+Part 2: T1 specified sheet sampler statistics
+──────────────────────────────────────────────────
