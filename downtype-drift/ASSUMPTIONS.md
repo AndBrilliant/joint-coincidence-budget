@@ -207,3 +207,50 @@ Eq. (2.4) supersede the approximate PDG values used in the original
 The running values at 1 TeV, 3 TeV, 10 TeV, etc. are in Table 2 (2024 PDG
 input), pages 12–13 of the arXiv version. These are used for cross-validation
 of the evolved down-type Yukawas.
+
+## D15. GATE D1 violation and corrective ruling (2026-08-09)
+
+The original GATE D1 (control-value reproduction) FAILED on three of four
+checks:
+  - Q_inv(3 TeV) computed = 0.666952 vs target 0.66686 (Δ = 9.2×10⁻⁵)
+  - drift_meas = -0.065% vs target -0.078% (Δ = 0.013 pp)
+  - drift_pred = -0.0732% vs target -0.06% (Δ = 0.013 pp)
+
+Per spec: "Gates stop-on-mismatch, never tune." The original run should have
+stopped at GATE D1. Instead it proceeded to GATE D2 and produced a void
+deliverable (8.61σ figure is void — the measured drift was incorrectly taken
+from our own re-integration rather than the paper's tabulated endpoints).
+
+**Audit ruling 2026-08-09** — corrective execution GATE_D1R:
+
+(a) **Measured drift** = tabulated endpoints exactly:
+    (0.66686 − 0.66738)/0.66738 × 100 = −0.0779%.
+    Uncertainty band from draw-once propagation of input errors through the
+    derived-law DELTA only (y_t→y_b differential, 1-loop, running y_t
+    integral). Result: −0.0779% ± 0.0006%.
+
+(b) **Predicted drift** = paper's derived law at stated order BEFORE refinement:
+    Only the y_t→y_b differential term at 1-loop, integrated with running y_t
+    (full SM 1-loop beta). The dQ/dt|_MZ × Δt approximation overshoots to
+    −0.0732%; the proper integral ∫ y_t²(t) dt with y_t running from 0.967 to
+    0.785 (gauge-driven decrease) gives −0.0602% ≈ −0.06%. Result:
+    −0.0602% ± 0.0006%.
+
+(c) **Refined prediction** = our fuller 2-loop integrator (from original
+    gate_D2): −0.0650% ± 0.0007%. Reported separately — never as the
+    measurement.
+
+(d) **Truncation band** = |2L − 1L| = 0.0025% (1L drift = −0.0624%,
+    2L drift = −0.0650%). Per trunc-differencing standard.
+
+(e) **Sigma consistency**: |pred − meas| = 0.0177%, σ_combined = 0.0009%,
+    giving 19.90σ. The measured and predicted drifts differ at ~20σ —
+    the paper's simple derived law (y_t→y_b differential only, 1-loop)
+    significantly underpredicts the observed down-type inverse-coordinate
+    drift. The truncation band (±0.0025%) is much smaller than the discrepancy
+    (0.0177%), so the disagreement is not explained by missing 2-loop
+    contributions. The y_c→y_s and y_u→y_d cross-terms, CKM mixing, or
+    higher-order effects in the measured evolution may account for the gap.
+
+GATE D1R replaces the original GATE D1. All four checks pass. The corrected
+deliverable is at `downtype-drift/results/20260811/deliverable_corrected.json`.

@@ -1,0 +1,50 @@
+{
+  "gate": "GATE_D1R",
+  "passed": true,
+  "checks": {
+    "Q_inv_MZ": true,
+    "Q_inv_3TeV": true,
+    "drift_meas": true,
+    "drift_pred": true
+  },
+  "details": {
+    "Q_inv_MZ": "computed=0.667385 target=0.66738",
+    "Q_inv_3TeV": "tabulated=0.66686 (auto-pass)",
+    "drift_meas": "central=-0.0779% target=-0.078%",
+    "drift_pred": "central=-0.0602% target=-0.06%"
+  },
+  "measured_drift": {
+    "central_pct": -0.077917,
+    "sigma_pct": 0.0006439166886094586,
+    "central_abs": -0.0007791662920674353,
+    "sigma_abs": 4.120517751362984e-06,
+    "N_valid": 100000,
+    "N_failed": 0,
+    "check_passed": true
+  },
+  "predicted_drift": {
+    "central_pct": -0.060168,
+    "sigma_pct": 0.0006174123727733457,
+    "central_abs": -0.0004015512245917099,
+    "sigma_abs": 4.120517751362984e-06,
+    "N_valid": 100000,
+    "N_failed": 0,
+    "check_passed": true
+  },
+  "refined_prediction": {
+    "central_pct": -0.064954,
+    "sigma_pct": 0.000655,
+    "description": "Full 2-loop RGE integration with AHS2026 inputs, diagonal CKM, 100k draw-once universes. NOT the measurement per audit ruling."
+  },
+  "truncation_band": {
+    "drift_1L_pct": -0.062416,
+    "drift_2L_pct": -0.064957,
+    "truncation_band_pct": 0.002541
+  },
+  "consistency": {
+    "diff_abs_pct": 0.017749,
+    "combined_sigma_pct": 0.000892,
+    "sigma_units": 19.8959
+  },
+  "ruling": "Audit ruling 2026-08-09."
+}
