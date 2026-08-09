@@ -1,8 +1,104 @@
 # ASSUMPTIONS.md — Joint Coincidence Budget (P3+P4)
 
 **ENGINE_ID:** amb
-**Production seed:** 20260811
-**Execution spec version:** v0.5-freeze
+**Latest spec version:** v0.3 (audit-response revision)
+**Archived spec versions:** v0.5-freeze, v0.4, v0.3, v0.2
+**Production seed:** SHA-256 derived per cell from spec text (see specs/SPEC_V03.md)
+
+## v0.3 Changes — Audit-Response Revision + T1 Rerun (2026-08-09)
+
+### A43. v0.3: Accepted-N semantics — root-cause fix
+
+External audit identified that v0.2 T1 cells counted REJECTED sheet proposals
+in N_eff. The T1 Koide-sheet sampler has an internal rejection rate (~20.8%):
+draws where the Koide quadratic has no valid solution, where m2 falls outside
+(m1, m3), or where the mass hierarchy m3/m1 > HIERARCHY_MIN fails. In v0.2,
+these rejected proposals were included in N_eff, making L1@T1 read 0.792
+(= acceptance rate) rather than 1.000 (= granted on sheet by construction).
+
+**Fix:** The sampler now generates exactly N ACCEPTED worlds per cell.
+Rejection is internal and tracked separately. N_eff = N accepted worlds,
+unambiguous. L1@T1 = 1.000000 exactly (verified at G2). The acceptance
+rate is reported per cell as a separate diagnostic.
+
+Analytic acceptance rate: ln(0.0147/1e-5) / ln(1e4) = 0.79197.
+The 0.0147 threshold comes from the hierarchy filter m3/m1 > (4+√18)² ≈ 67.9:
+with m3/m1 = 1/r, this requires r < 1/67.9 ≈ 0.0147. Since r ~ logU[1e-5, 1e-1],
+this rejects the upper ~20.8% of the r-range.
+
+### A44. v0.3: T1 described as standalone Koide-sheet measure
+
+T1 is now documented as "a separately specified Koide-sheet measure, log-uniform
+in (m3, m1/m3)" — never as 'T0 conditioned on Koide'. The two priors (T0 and T1)
+are distinct: T0 draws three independent log-uniform masses, T1 draws from a
+2-parameter Koide-sheet subspace parameterized by (m3, m1/m3) with m2 determined
+by the Koide equation.
+
+Support behavior: m1 can fall below the T0 floor (0.3 MeV) because m1 = r×m3
+with r as low as 1e-5 and m3 as low as 0.3, so m1 ∈ [3×10⁻⁶, 2000] MeV.
+The T0 floor of 0.3 MeV is a property of the T0 prior, not of Nature, and the
+Koide sheet naturally extends below it.
+
+### A45. v0.3: 20-target U1 menu (1/3 included)
+
+v0.2 used 19 irreducible fractions p/q with p,q ≤ 9 in (1/3, 1] — the
+half-open interval excluded 1/3. v0.3 adds (1,3) for a 20-target closed
+menu matching uptype-pinning v2.0. The full list: 1/3, 1/2, 2/3, 3/4,
+2/5, 3/5, 4/5, 5/6, 3/7, 4/7, 5/7, 6/7, 3/8, 5/8, 7/8, 4/9, 5/9, 7/9, 8/9, 1/1.
+Enforced by assertion in the engine.
+
+### A46. v0.3: True truncated normal for logN prior
+
+v0.2's 'logN' prior sampled log-masses from a normal distribution with
+np.clip() truncation. This is a censored normal, not a truncated normal.
+v0.3 uses scipy.stats.truncnorm for proper truncated normal in log space,
+with bounds [log(lo), log(hi)], location at the log-midpoint, and scale
+1.5×log(10). The old clip-based variant is retained under the name
+'censored' for backward compatibility.
+
+The difference is small in practice: with a scale of 3.45 log-units spanning
+a range of 8.80 log-units, the truncation cuts ~0.5% of probability mass
+at each tail. The truncnorm properly renormalizes; the old clip variant
+does not.
+
+### A47. v0.3: |log(r/r0)| <= eps for L2/L3 criterion
+
+The frozen spec (§3) states the criterion as |log(r/r0)| ≤ ε. v0.2
+implemented |r/r0 − 1| ≤ ε instead. For ε = 1e−5 and 2.1e−5, the two
+forms differ by ∼ε²/2 ≈ 5e−11, which is negligible against the tolerances.
+Nevertheless, v0.3 implements the exact spec form. The r-intersection
+function for T1 lepton-block probability also uses the log form.
+
+Recorded here so the change is explicit. The effect on singletons and
+cascade rates is indistinguishable at the precision of this study.
+
+### A48. v0.3: Alt-sheet T1 robustness variant
+
+One alternative T1 sheet parameterization is included at reduced N=2e8:
+log-uniform in (m2, m1/m2), solving the Koide equation for m3 (plus branch
+of the quadratic, giving m3 > m2). This tests whether the parameterization
+choice (m3 as the free mass vs m2) affects the joint budget. Reported
+alongside the standard parameterization.
+
+### A49. v0.3: SHA-256 seed derivation
+
+All per-cell seeds are derived from SHA-256(spec_text + cell_name).
+The spec text is the contents of specs/SPEC_V03.md. This makes seeds
+deterministic, auditable, and tied to the exact spec version — any
+change to the spec produces different seeds. Recorded in MANIFEST.json.
+
+### A50. v0.3: T0 cells NOT rerun
+
+Per the spec, T0 cells are unaffected by the accepted-N change (T0 draws
+have no internal rejection; every draw is within the prior range so the
+acceptance rate is identically 1.0). v0.2 T0 results are carried forward
+as archived. Only T1 cells are rerun.
+
+### A51. v0.3: v0.2-v0.5 results preserved
+
+All v0.1-v0.5 result directories, tags, and data remain untouched per §10
+void discipline. v0.3 results go into results/amb-v0.3/. v0.2 T1 cells
+remain archived as the pre-audit reference state.
 
 ## v0.5 Changes — Anchor Averaging and Stage-Local Inflation
 

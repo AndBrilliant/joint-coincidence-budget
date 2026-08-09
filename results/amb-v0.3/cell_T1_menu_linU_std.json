@@ -1,0 +1,27 @@
+{
+  "engine_id": "amb",
+  "spec_version": "v0.3",
+  "spec_hash": "330bb1c7dceb278479b1bac1bdc2a672fd731508eb86b70799917e40290aa2ad",
+  "cell_key": "T1_menu_linU_std",
+  "seed": 263742455,
+  "condition": "T1",
+  "u1_mode": "menu",
+  "prior": "linU",
+  "sampler": "standard",
+  "hits": 0,
+  "N_accepted": 200372421,
+  "N_attempted": 253000000,
+  "acceptance_rate": 0.7919858537549407,
+  "rate": 0.0,
+  "cp95_lower": 0.0,
+  "cp95_upper": 1.8410115532604098e-08,
+  "stage_counts": {
+    "L2": 512,
+    "L3": 512,
+    "Q1": 0,
+    "Q2": 0,
+    "U1_menu": 0
+  },
+  "elapsed_s": 15.316093683242798,
+  "type": "BOUND"
+}

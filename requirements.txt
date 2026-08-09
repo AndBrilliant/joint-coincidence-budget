@@ -1,0 +1,5 @@
+# Joint Coincidence Budget v0.3 — pinned environment
+# ENGINE_ID: amb
+# Install: pip install -r requirements.txt
+numpy==1.26.4
+scipy==1.14.1

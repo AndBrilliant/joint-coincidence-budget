@@ -1,0 +1,27 @@
+{
+  "engine_id": "amb",
+  "spec_version": "v0.3",
+  "spec_hash": "330bb1c7dceb278479b1bac1bdc2a672fd731508eb86b70799917e40290aa2ad",
+  "cell_key": "T1_fixed_logU_alt",
+  "seed": 2118848253,
+  "condition": "T1",
+  "u1_mode": "fixed",
+  "prior": "logU",
+  "sampler": "alt",
+  "hits": 0,
+  "N_accepted": 200000000,
+  "N_attempted": 200000000,
+  "acceptance_rate": 1.0,
+  "rate": 0.0,
+  "cp95_lower": 0.0,
+  "cp95_upper": 1.8444397100471783e-08,
+  "stage_counts": {
+    "L2": 434,
+    "L3": 434,
+    "Q1": 1,
+    "Q2": 0,
+    "U1_fixed": 0
+  },
+  "elapsed_s": 13.845362663269043,
+  "type": "BOUND"
+}

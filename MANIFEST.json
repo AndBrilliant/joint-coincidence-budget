@@ -1,0 +1,72 @@
+{
+  "engine_id": "amb",
+  "spec_version": "v0.3",
+  "spec_path": "specs/SPEC_V03.md",
+  "spec_sha256": "330bb1c7dceb278479b1bac1bdc2a672fd731508eb86b70799917e40290aa2ad",
+  "created": "2026-08-09",
+  "git_commit": "a9ec80ed87a12d5602a6235b0f24953d7e6d34c2",
+  "tag": "v0.3-claude-code",
+
+  "dependencies": {
+    "python": "3.9",
+    "numpy": "1.26.4",
+    "scipy": "1.14.1"
+  },
+
+  "seeds": {
+    "method": "SHA-256(spec_text + cell_name), first 4 bytes as uint32",
+    "T1_singletons_logU": 1010696140,
+    "T1_fixed_logU_std": 2401505522,
+    "T1_menu_logU_std": 1841573567,
+    "T1_fixed_logN_std": 3985285180,
+    "T1_menu_logN_std": 1107989473,
+    "T1_fixed_linU_std": 2872890639,
+    "T1_menu_linU_std": 263742455,
+    "T1_fixed_logU_alt": 2118848253,
+    "T1_menu_logU_alt": 1599768764
+  },
+
+  "gates": {
+    "G1_golden_regression": {
+      "seed": 20260726,
+      "N": 10000000,
+      "expected_hits": 69,
+      "actual_hits": 69,
+      "status": "PASS"
+    },
+    "G2_T1_L1_singleton": {
+      "N_accepted": 10296503,
+      "L1_rate": 1.0,
+      "acceptance_rate": 0.7920386923076923,
+      "analytic_acceptance": 0.79197,
+      "status": "PASS"
+    },
+    "G3_support_gates": {
+      "r_obs": 0.0002876,
+      "r_range": [1e-5, 1e-1],
+      "hierarchy_min": 67.9,
+      "m3_m1_obs": 3477.4,
+      "status": "PASS"
+    }
+  },
+
+  "results": {
+    "singletons": "results/amb-v0.3/singletons_T1_logU_v0.3.json",
+    "tier1_summary": "results/amb-v0.3/tier1_summary_v0.3.json",
+    "cell_results_dir": "results/amb-v0.3/",
+    "total_elapsed_s": 439
+  },
+
+  "result_hashes": {
+    "cell_T1_fixed_linU_std.json": "0ba8062b43321bebab566ee3bf8a4802aeaf5cd06542af630c36b6254dcae691",
+    "cell_T1_fixed_logN_std.json": "cd9fc382d520c9f72e1f42d64bebc82a22cae0f192a9e9158d8b345f50b9085c",
+    "cell_T1_fixed_logU_alt.json": "2b498c497a7ea98ebbb459ba48bd87a3ba1e6d03b5b3d902d4588c0912297bed",
+    "cell_T1_fixed_logU_std.json": "ee6719d3a008a25fdb71fcba1c71f1b0cf8e8ff2fa9420290ac60c931073075a",
+    "cell_T1_menu_linU_std.json": "60e333bf1a639e4572ff60d10218cf552a5a8f90f827c064c97f843c426bf299",
+    "cell_T1_menu_logN_std.json": "1fef8feceff8ac356eb5f05c54a38a0f52fa0bf3eae31584be1502229d817e91",
+    "cell_T1_menu_logU_alt.json": "1723ed2d943e96c3cc1402dcf8d7c43d0be1f5eba1df01f8120e3569a5afabfc",
+    "cell_T1_menu_logU_std.json": "5a902094442604a0fe6b6a13e53343a9a67c8eb7732e6b56becf8c2ac641f30f",
+    "singletons_T1_logU_v0.3.json": "053595b5cd3e925ddf4ab1c61cb1d2b456cb58d6e781926b202f50479ae6e4ec",
+    "tier1_summary_v0.3.json": "9d4464cc33019e60412c289afc876ce30f6b830f2472a7984c0cf2a4a1e0c16a"
+  }
+}

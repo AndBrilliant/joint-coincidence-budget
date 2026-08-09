@@ -1,0 +1,27 @@
+{
+  "engine_id": "amb",
+  "spec_version": "v0.3",
+  "spec_hash": "330bb1c7dceb278479b1bac1bdc2a672fd731508eb86b70799917e40290aa2ad",
+  "cell_key": "T1_fixed_logN_std",
+  "seed": 3985285180,
+  "condition": "T1",
+  "u1_mode": "fixed",
+  "prior": "logN",
+  "sampler": "standard",
+  "hits": 0,
+  "N_accepted": 200362463,
+  "N_attempted": 253000000,
+  "acceptance_rate": 0.7919464940711463,
+  "rate": 0.0,
+  "cp95_lower": 0.0,
+  "cp95_upper": 1.8411030514013492e-08,
+  "stage_counts": {
+    "L2": 509,
+    "L3": 509,
+    "Q1": 0,
+    "Q2": 0,
+    "U1_fixed": 0
+  },
+  "elapsed_s": 111.12387585639954,
+  "type": "BOUND"
+}
