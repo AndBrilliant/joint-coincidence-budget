@@ -1,0 +1,311 @@
+=== v0.3 PRODUCTION START 2026-08-09T13:45:00+09:00 ===
+Log: results/amb-v0.3/production_20260809_134500.log
+PID: 59626
+Spec SHA-256: 330bb1c7dceb278479b1bac1bdc2a672fd731508eb86b70799917e40290aa2ad
+
+======================================================================
+JOINT COINCIDENCE BUDGET ENGINE v0.3 — amb
+Spec: specs/SPEC_V03.md  SHA-256: 330bb1c7dceb2784...
+Output: results/amb-v0.3
+Mode: full
+======================================================================
+
+──────────────────────────────────────────────────
+G3: SUPPORT GATE
+──────────────────────────────────────────────────
+G3 PASS: r_obs=2.875740e-04 in [1e-05, 0.1], m3/m1=3477.4 > 67.9
+
+======================================================================
+G1: GOLDEN REGRESSION — seed=20260726, N=1e7 -> expect 69 hits
+======================================================================
+  kdist(leptons) = 3.304884e-06  (target: 3.3049e-6)
+  kdist(downs)   = 1.050329e-03  (target: 1.0503e-3)
+  OK kdist values match
+    batch 2/10, hits=17
+    batch 4/10, hits=28
+    batch 6/10, hits=40
+    batch 8/10, hits=55
+    batch 10/10, hits=69
+  Total hits: 69  (expected: 69)
+  CP95 pooled 189/30000000: [5.433810e-06, 7.265016e-06]  (target: [5.43e-6, 7.27e-6])
+G1 PASS: golden regression byte-identical OK
+
+──────────────────────────────────────────────────
+G2: T1 L1 SINGLETON = 1.000000 VERIFICATION
+──────────────────────────────────────────────────
+  Seed: 1010696140
+  Measuring T1 singletons at N_accepted=10,000,000, prior=logU, sampler=standard
+    1,584,342/10,000,000 accepted (16%), 3529264 acc/s, L2=4, L3=96
+    2,376,036/10,000,000 accepted (24%), 3665092 acc/s, L2=5, L3=123
+    3,167,790/10,000,000 accepted (32%), 3727599 acc/s, L2=7, L3=165
+    4,751,962/10,000,000 accepted (48%), 3748326 acc/s, L2=12, L3=253
+    5,544,329/10,000,000 accepted (55%), 3781513 acc/s, L2=12, L3=302
+    6,336,364/10,000,000 accepted (63%), 3799961 acc/s, L2=14, L3=355
+    7,128,049/10,000,000 accepted (71%), 3815014 acc/s, L2=15, L3=390
+    8,711,807/10,000,000 accepted (87%), 3829714 acc/s, L2=18, L3=469
+    9,504,369/10,000,000 accepted (95%), 3831634 acc/s, L2=20, L3=515
+    10,296,503/10,000,000 accepted (103%), 3832908 acc/s, L2=26, L3=571
+  Done in 3s, acceptance_rate=0.7920, attempted=13,000,000
+
+  L1 rate: 1.000000  (must be 1.000000)
+  Acceptance rate: 0.792039  (v0.2 anomaly ~0.792)
+  Analytic check: ln(0.0147/1e-5)/ln(1e4) = 0.79183
+  Acceptance rate match to analytic: OK (got 0.79204, analytic 0.79183)
+
+  T1 Singletons at N_accepted=10,296,503:
+    L1: 10296503/10296503 = 1.000000e+00 CP95=[9.999996e-01,1.000000e+00]
+    L2: 26/10296503 = 2.525129e-06 CP95=[1.649499e-06,3.699897e-06]
+    L3: 571/10296503 = 5.545572e-05 CP95=[5.099992e-05,6.019654e-05]
+    Q1: 935/10296503 = 9.080753e-05 CP95=[8.507974e-05,9.681946e-05]
+    Q2: 15206/10296503 = 1.476812e-03 CP95=[1.453448e-03,1.500457e-03]
+    U1_fixed: 72418/10296503 = 7.033262e-03 CP95=[6.982307e-03,7.084494e-03]
+    U1_menu: 1392890/10296503 = 1.352780e-01 CP95=[1.350691e-01,1.354870e-01]
+  Saved: results/amb-v0.3/singletons_T1_logU_v0.3.json
+G2 PASS: T1 L1 singleton = 1.000000 OK
+
+======================================================================
+TIER-1 PRODUCTION — v0.3 ACCEPTED-N SEMANTICS
+======================================================================
+
+────────────────────────────────────────────────────────────
+CELL 1/8: T1_fixed_logU_std — SKIPPED (completed)
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+CELL 2/8: T1_menu_logU_std
+  N_accepted=2,000,000,000  seed=1841573567
+────────────────────────────────────────────────────────────
+  Cascade order (rarest first): ['L2', 'L3', 'Q1', 'Q2', 'U1_menu']
+    [T1_menu_logU_std] 100,576,670/2,000,000,000 acc (5%), attempted=127,000,000, acc_rate=0.7919, rate=12489294 acc/s, hits=0, L2=232, L3=232, Q1=0
+    [T1_menu_logU_std] 200,361,779/2,000,000,000 acc (10%), attempted=253,000,000, acc_rate=0.7919, rate=12357883 acc/s, hits=0, L2=464, L3=464, Q1=0
+    [T1_menu_logU_std] 300,146,655/2,000,000,000 acc (15%), attempted=379,000,000, acc_rate=0.7919, rate=12352591 acc/s, hits=0, L2=723, L3=723, Q1=0
+    [T1_menu_logU_std] 400,727,887/2,000,000,000 acc (20%), attempted=506,000,000, acc_rate=0.7920, rate=12418196 acc/s, hits=0, L2=983, L3=983, Q1=0
+    [T1_menu_logU_std] 500,520,078/2,000,000,000 acc (25%), attempted=632,000,000, acc_rate=0.7920, rate=12360689 acc/s, hits=0, L2=1221, L3=1221, Q1=0
+    [T1_menu_logU_std] 600,306,930/2,000,000,000 acc (30%), attempted=758,000,000, acc_rate=0.7920, rate=12332488 acc/s, hits=0, L2=1478, L3=1478, Q1=0
+    [T1_menu_logU_std] 700,095,993/2,000,000,000 acc (35%), attempted=884,000,000, acc_rate=0.7920, rate=12386714 acc/s, hits=0, L2=1710, L3=1710, Q1=0
+    [T1_menu_logU_std] 800,681,794/2,000,000,000 acc (40%), attempted=1,011,000,000, acc_rate=0.7920, rate=12411054 acc/s, hits=0, L2=1923, L3=1923, Q1=0
+    [T1_menu_logU_std] 900,467,572/2,000,000,000 acc (45%), attempted=1,137,000,000, acc_rate=0.7920, rate=12437544 acc/s, hits=0, L2=2176, L3=2176, Q1=0
+    [T1_menu_logU_std] 1,000,248,924/2,000,000,000 acc (50%), attempted=1,263,000,000, acc_rate=0.7920, rate=12424414 acc/s, hits=0, L2=2432, L3=2432, Q1=0
+    [T1_menu_logU_std] 1,100,034,526/2,000,000,000 acc (55%), attempted=1,389,000,000, acc_rate=0.7920, rate=12440834 acc/s, hits=0, L2=2679, L3=2679, Q1=0
+    [T1_menu_logU_std] 1,200,619,691/2,000,000,000 acc (60%), attempted=1,516,000,000, acc_rate=0.7920, rate=12444033 acc/s, hits=0, L2=2916, L3=2916, Q1=0
+    [T1_menu_logU_std] 1,300,405,284/2,000,000,000 acc (65%), attempted=1,642,000,000, acc_rate=0.7920, rate=12445749 acc/s, hits=0, L2=3165, L3=3165, Q1=0
+    [T1_menu_logU_std] 1,400,191,592/2,000,000,000 acc (70%), attempted=1,768,000,000, acc_rate=0.7920, rate=12440023 acc/s, hits=0, L2=3396, L3=3396, Q1=0
+    [T1_menu_logU_std] 1,500,781,653/2,000,000,000 acc (75%), attempted=1,895,000,000, acc_rate=0.7920, rate=12454031 acc/s, hits=0, L2=3672, L3=3672, Q1=0
+    [T1_menu_logU_std] 1,600,570,901/2,000,000,000 acc (80%), attempted=2,021,000,000, acc_rate=0.7920, rate=12458105 acc/s, hits=0, L2=3925, L3=3925, Q1=0
+    [T1_menu_logU_std] 1,700,358,747/2,000,000,000 acc (85%), attempted=2,147,000,000, acc_rate=0.7920, rate=12477828 acc/s, hits=0, L2=4180, L3=4180, Q1=0
+    [T1_menu_logU_std] 1,800,143,885/2,000,000,000 acc (90%), attempted=2,273,000,000, acc_rate=0.7920, rate=12489733 acc/s, hits=0, L2=4420, L3=4420, Q1=0
+    [T1_menu_logU_std] 1,900,724,727/2,000,000,000 acc (95%), attempted=2,400,000,000, acc_rate=0.7920, rate=12488739 acc/s, hits=0, L2=4684, L3=4684, Q1=0
+    [T1_menu_logU_std] 2,000,514,436/2,000,000,000 acc (100%), attempted=2,526,000,000, acc_rate=0.7920, rate=12462663 acc/s, hits=0, L2=4915, L3=4915, Q1=0
+  DONE [T1_menu_logU_std]: hits=0, N_accepted=2,000,514,436, attempted=2,526,000,000, f=0.000000e+00, CP95=[0.000000e+00,1.843965e-09], acc_rate=0.7920, 161s
+  -> BOUND: f=0.000000e+00 CP95=[0.000000e+00,1.843965e-09], acc_rate=0.7920
+
+────────────────────────────────────────────────────────────
+CELL 3/8: T1_fixed_logN_std
+  N_accepted=200,000,000  seed=3985285180
+────────────────────────────────────────────────────────────
+  Cascade order (rarest first): ['L2', 'L3', 'Q1', 'Q2', 'U1_fixed']
+    [T1_fixed_logN_std] 10,293,567/200,000,000 acc (5%), attempted=13,000,000, acc_rate=0.7918, rate=1773072 acc/s, hits=0, L2=36, L3=36, Q1=0
+    [T1_fixed_logN_std] 20,588,721/200,000,000 acc (10%), attempted=26,000,000, acc_rate=0.7919, rate=1797019 acc/s, hits=0, L2=59, L3=59, Q1=0
+    [T1_fixed_logN_std] 30,090,582/200,000,000 acc (15%), attempted=38,000,000, acc_rate=0.7919, rate=1785002 acc/s, hits=0, L2=82, L3=82, Q1=0
+    [T1_fixed_logN_std] 40,386,991/200,000,000 acc (20%), attempted=51,000,000, acc_rate=0.7919, rate=1772253 acc/s, hits=0, L2=101, L3=101, Q1=0
+    [T1_fixed_logN_std] 50,683,837/200,000,000 acc (25%), attempted=64,000,000, acc_rate=0.7919, rate=1773416 acc/s, hits=0, L2=123, L3=123, Q1=0
+    [T1_fixed_logN_std] 60,186,334/200,000,000 acc (30%), attempted=76,000,000, acc_rate=0.7919, rate=1776308 acc/s, hits=0, L2=144, L3=144, Q1=0
+    [T1_fixed_logN_std] 70,480,874/200,000,000 acc (35%), attempted=89,000,000, acc_rate=0.7919, rate=1778648 acc/s, hits=0, L2=163, L3=163, Q1=0
+    [T1_fixed_logN_std] 80,777,672/200,000,000 acc (40%), attempted=102,000,000, acc_rate=0.7919, rate=1778669 acc/s, hits=0, L2=191, L3=191, Q1=0
+    [T1_fixed_logN_std] 90,283,294/200,000,000 acc (45%), attempted=114,000,000, acc_rate=0.7920, rate=1776390 acc/s, hits=0, L2=210, L3=210, Q1=0
+    [T1_fixed_logN_std] 100,577,061/200,000,000 acc (50%), attempted=127,000,000, acc_rate=0.7919, rate=1779557 acc/s, hits=0, L2=245, L3=245, Q1=0
+    [T1_fixed_logN_std] 110,081,488/200,000,000 acc (55%), attempted=139,000,000, acc_rate=0.7920, rate=1783076 acc/s, hits=0, L2=282, L3=282, Q1=0
+    [T1_fixed_logN_std] 120,374,749/200,000,000 acc (60%), attempted=152,000,000, acc_rate=0.7919, rate=1789156 acc/s, hits=0, L2=312, L3=312, Q1=0
+    [T1_fixed_logN_std] 130,669,989/200,000,000 acc (65%), attempted=165,000,000, acc_rate=0.7919, rate=1791872 acc/s, hits=0, L2=337, L3=337, Q1=0
+    [T1_fixed_logN_std] 140,172,061/200,000,000 acc (70%), attempted=177,000,000, acc_rate=0.7919, rate=1795008 acc/s, hits=0, L2=352, L3=352, Q1=0
+    [T1_fixed_logN_std] 150,468,079/200,000,000 acc (75%), attempted=190,000,000, acc_rate=0.7919, rate=1796470 acc/s, hits=0, L2=383, L3=383, Q1=0
+    [T1_fixed_logN_std] 160,763,471/200,000,000 acc (80%), attempted=203,000,000, acc_rate=0.7919, rate=1798611 acc/s, hits=0, L2=408, L3=408, Q1=0
+    [T1_fixed_logN_std] 170,266,951/200,000,000 acc (85%), attempted=215,000,000, acc_rate=0.7919, rate=1802062 acc/s, hits=0, L2=431, L3=431, Q1=0
+    [T1_fixed_logN_std] 180,565,435/200,000,000 acc (90%), attempted=228,000,000, acc_rate=0.7920, rate=1803309 acc/s, hits=0, L2=459, L3=459, Q1=0
+    [T1_fixed_logN_std] 190,069,284/200,000,000 acc (95%), attempted=240,000,000, acc_rate=0.7920, rate=1803048 acc/s, hits=0, L2=487, L3=487, Q1=0
+    [T1_fixed_logN_std] 200,362,463/200,000,000 acc (100%), attempted=253,000,000, acc_rate=0.7919, rate=1803058 acc/s, hits=0, L2=509, L3=509, Q1=0
+  DONE [T1_fixed_logN_std]: hits=0, N_accepted=200,362,463, attempted=253,000,000, f=0.000000e+00, CP95=[0.000000e+00,1.841103e-08], acc_rate=0.7919, 111s
+  -> BOUND: f=0.000000e+00 CP95=[0.000000e+00,1.841103e-08], acc_rate=0.7919
+
+────────────────────────────────────────────────────────────
+CELL 4/8: T1_menu_logN_std
+  N_accepted=200,000,000  seed=1107989473
+────────────────────────────────────────────────────────────
+  Cascade order (rarest first): ['L2', 'L3', 'Q1', 'Q2', 'U1_menu']
+    [T1_menu_logN_std] 10,297,282/200,000,000 acc (5%), attempted=13,000,000, acc_rate=0.7921, rate=1837420 acc/s, hits=0, L2=19, L3=19, Q1=0
+    [T1_menu_logN_std] 20,593,821/200,000,000 acc (10%), attempted=26,000,000, acc_rate=0.7921, rate=1850260 acc/s, hits=0, L2=38, L3=38, Q1=0
+    [T1_menu_logN_std] 30,095,450/200,000,000 acc (15%), attempted=38,000,000, acc_rate=0.7920, rate=1852977 acc/s, hits=0, L2=55, L3=55, Q1=0
+    [T1_menu_logN_std] 40,390,062/200,000,000 acc (20%), attempted=51,000,000, acc_rate=0.7920, rate=1852042 acc/s, hits=0, L2=77, L3=77, Q1=0
+    [T1_menu_logN_std] 50,686,005/200,000,000 acc (25%), attempted=64,000,000, acc_rate=0.7920, rate=1852395 acc/s, hits=0, L2=99, L3=99, Q1=0
+    [T1_menu_logN_std] 60,191,335/200,000,000 acc (30%), attempted=76,000,000, acc_rate=0.7920, rate=1843622 acc/s, hits=0, L2=127, L3=127, Q1=0
+    [T1_menu_logN_std] 70,485,984/200,000,000 acc (35%), attempted=89,000,000, acc_rate=0.7920, rate=1844025 acc/s, hits=0, L2=158, L3=158, Q1=0
+    [T1_menu_logN_std] 80,780,855/200,000,000 acc (40%), attempted=102,000,000, acc_rate=0.7920, rate=1843057 acc/s, hits=0, L2=184, L3=184, Q1=0
+    [T1_menu_logN_std] 90,285,265/200,000,000 acc (45%), attempted=114,000,000, acc_rate=0.7920, rate=1839998 acc/s, hits=0, L2=216, L3=216, Q1=0
+    [T1_menu_logN_std] 100,581,688/200,000,000 acc (50%), attempted=127,000,000, acc_rate=0.7920, rate=1840424 acc/s, hits=0, L2=254, L3=254, Q1=0
+    [T1_menu_logN_std] 110,084,552/200,000,000 acc (55%), attempted=139,000,000, acc_rate=0.7920, rate=1841881 acc/s, hits=0, L2=275, L3=275, Q1=0
+    [T1_menu_logN_std] 120,379,523/200,000,000 acc (60%), attempted=152,000,000, acc_rate=0.7920, rate=1842755 acc/s, hits=0, L2=298, L3=298, Q1=0
+    [T1_menu_logN_std] 130,672,850/200,000,000 acc (65%), attempted=165,000,000, acc_rate=0.7920, rate=1842632 acc/s, hits=0, L2=327, L3=327, Q1=0
+    [T1_menu_logN_std] 140,175,260/200,000,000 acc (70%), attempted=177,000,000, acc_rate=0.7920, rate=1842116 acc/s, hits=0, L2=352, L3=352, Q1=0
+    [T1_menu_logN_std] 150,471,556/200,000,000 acc (75%), attempted=190,000,000, acc_rate=0.7920, rate=1845087 acc/s, hits=0, L2=373, L3=373, Q1=0
+    [T1_menu_logN_std] 160,765,509/200,000,000 acc (80%), attempted=203,000,000, acc_rate=0.7919, rate=1846045 acc/s, hits=0, L2=393, L3=393, Q1=0
+    [T1_menu_logN_std] 170,270,067/200,000,000 acc (85%), attempted=215,000,000, acc_rate=0.7920, rate=1846131 acc/s, hits=0, L2=409, L3=409, Q1=0
+    [T1_menu_logN_std] 180,565,957/200,000,000 acc (90%), attempted=228,000,000, acc_rate=0.7920, rate=1847187 acc/s, hits=0, L2=435, L3=435, Q1=0
+    [T1_menu_logN_std] 190,070,113/200,000,000 acc (95%), attempted=240,000,000, acc_rate=0.7920, rate=1847537 acc/s, hits=0, L2=466, L3=466, Q1=0
+    [T1_menu_logN_std] 200,367,790/200,000,000 acc (100%), attempted=253,000,000, acc_rate=0.7920, rate=1845205 acc/s, hits=0, L2=488, L3=488, Q1=0
+  DONE [T1_menu_logN_std]: hits=0, N_accepted=200,367,790, attempted=253,000,000, f=0.000000e+00, CP95=[0.000000e+00,1.841054e-08], acc_rate=0.7920, 109s
+  -> BOUND: f=0.000000e+00 CP95=[0.000000e+00,1.841054e-08], acc_rate=0.7920
+
+────────────────────────────────────────────────────────────
+CELL 5/8: T1_fixed_linU_std
+  N_accepted=200,000,000  seed=2872890639
+────────────────────────────────────────────────────────────
+  Cascade order (rarest first): ['L2', 'L3', 'Q1', 'Q2', 'U1_fixed']
+    [T1_fixed_linU_std] 10,294,992/200,000,000 acc (5%), attempted=13,000,000, acc_rate=0.7919, rate=12565954 acc/s, hits=0, L2=26, L3=26, Q1=0
+    [T1_fixed_linU_std] 20,592,467/200,000,000 acc (10%), attempted=26,000,000, acc_rate=0.7920, rate=12295400 acc/s, hits=0, L2=61, L3=61, Q1=0
+    [T1_fixed_linU_std] 30,097,984/200,000,000 acc (15%), attempted=38,000,000, acc_rate=0.7921, rate=12254140 acc/s, hits=0, L2=82, L3=82, Q1=0
+    [T1_fixed_linU_std] 40,393,225/200,000,000 acc (20%), attempted=51,000,000, acc_rate=0.7920, rate=12208908 acc/s, hits=0, L2=113, L3=113, Q1=0
+    [T1_fixed_linU_std] 50,689,458/200,000,000 acc (25%), attempted=64,000,000, acc_rate=0.7920, rate=12238972 acc/s, hits=0, L2=136, L3=136, Q1=0
+    [T1_fixed_linU_std] 60,194,913/200,000,000 acc (30%), attempted=76,000,000, acc_rate=0.7920, rate=12259560 acc/s, hits=0, L2=163, L3=163, Q1=0
+    [T1_fixed_linU_std] 70,490,718/200,000,000 acc (35%), attempted=89,000,000, acc_rate=0.7920, rate=12263694 acc/s, hits=0, L2=190, L3=190, Q1=0
+    [T1_fixed_linU_std] 80,786,093/200,000,000 acc (40%), attempted=102,000,000, acc_rate=0.7920, rate=12317270 acc/s, hits=0, L2=208, L3=208, Q1=0
+    [T1_fixed_linU_std] 90,290,464/200,000,000 acc (45%), attempted=114,000,000, acc_rate=0.7920, rate=12392679 acc/s, hits=0, L2=239, L3=239, Q1=0
+    [T1_fixed_linU_std] 100,581,890/200,000,000 acc (50%), attempted=127,000,000, acc_rate=0.7920, rate=12521829 acc/s, hits=0, L2=259, L3=259, Q1=0
+    [T1_fixed_linU_std] 110,085,581/200,000,000 acc (55%), attempted=139,000,000, acc_rate=0.7920, rate=12635633 acc/s, hits=0, L2=278, L3=278, Q1=0
+    [T1_fixed_linU_std] 120,381,164/200,000,000 acc (60%), attempted=152,000,000, acc_rate=0.7920, rate=12737931 acc/s, hits=0, L2=311, L3=311, Q1=0
+    [T1_fixed_linU_std] 130,675,886/200,000,000 acc (65%), attempted=165,000,000, acc_rate=0.7920, rate=12814538 acc/s, hits=0, L2=326, L3=326, Q1=0
+    [T1_fixed_linU_std] 140,180,658/200,000,000 acc (70%), attempted=177,000,000, acc_rate=0.7920, rate=12849934 acc/s, hits=0, L2=347, L3=347, Q1=0
+    [T1_fixed_linU_std] 150,476,261/200,000,000 acc (75%), attempted=190,000,000, acc_rate=0.7920, rate=12879884 acc/s, hits=0, L2=362, L3=362, Q1=0
+    [T1_fixed_linU_std] 160,771,320/200,000,000 acc (80%), attempted=203,000,000, acc_rate=0.7920, rate=12902931 acc/s, hits=0, L2=388, L3=388, Q1=0
+    [T1_fixed_linU_std] 170,275,121/200,000,000 acc (85%), attempted=215,000,000, acc_rate=0.7920, rate=12863678 acc/s, hits=0, L2=405, L3=405, Q1=0
+    [T1_fixed_linU_std] 180,570,366/200,000,000 acc (90%), attempted=228,000,000, acc_rate=0.7920, rate=12858430 acc/s, hits=0, L2=433, L3=433, Q1=0
+    [T1_fixed_linU_std] 190,072,127/200,000,000 acc (95%), attempted=240,000,000, acc_rate=0.7920, rate=12850081 acc/s, hits=0, L2=464, L3=464, Q1=0
+    [T1_fixed_linU_std] 200,369,394/200,000,000 acc (100%), attempted=253,000,000, acc_rate=0.7920, rate=12853736 acc/s, hits=0, L2=488, L3=488, Q1=0
+  DONE [T1_fixed_linU_std]: hits=0, N_accepted=200,369,394, attempted=253,000,000, f=0.000000e+00, CP95=[0.000000e+00,1.841039e-08], acc_rate=0.7920, 16s
+  -> BOUND: f=0.000000e+00 CP95=[0.000000e+00,1.841039e-08], acc_rate=0.7920
+
+────────────────────────────────────────────────────────────
+CELL 6/8: T1_menu_linU_std
+  N_accepted=200,000,000  seed=263742455
+────────────────────────────────────────────────────────────
+  Cascade order (rarest first): ['L2', 'L3', 'Q1', 'Q2', 'U1_menu']
+    [T1_menu_linU_std] 10,297,880/200,000,000 acc (5%), attempted=13,000,000, acc_rate=0.7921, rate=12827512 acc/s, hits=0, L2=26, L3=26, Q1=0
+    [T1_menu_linU_std] 20,592,690/200,000,000 acc (10%), attempted=26,000,000, acc_rate=0.7920, rate=12792704 acc/s, hits=0, L2=58, L3=58, Q1=0
+    [T1_menu_linU_std] 30,101,803/200,000,000 acc (15%), attempted=38,000,000, acc_rate=0.7922, rate=13036716 acc/s, hits=0, L2=86, L3=86, Q1=0
+    [T1_menu_linU_std] 40,397,516/200,000,000 acc (20%), attempted=51,000,000, acc_rate=0.7921, rate=13111445 acc/s, hits=0, L2=117, L3=117, Q1=0
+    [T1_menu_linU_std] 50,692,027/200,000,000 acc (25%), attempted=64,000,000, acc_rate=0.7921, rate=13184196 acc/s, hits=0, L2=138, L3=138, Q1=0
+    [T1_menu_linU_std] 60,196,245/200,000,000 acc (30%), attempted=76,000,000, acc_rate=0.7921, rate=13226721 acc/s, hits=0, L2=166, L3=166, Q1=0
+    [T1_menu_linU_std] 70,492,335/200,000,000 acc (35%), attempted=89,000,000, acc_rate=0.7920, rate=13267326 acc/s, hits=0, L2=193, L3=193, Q1=0
+    [T1_menu_linU_std] 80,785,694/200,000,000 acc (40%), attempted=102,000,000, acc_rate=0.7920, rate=13275861 acc/s, hits=0, L2=216, L3=216, Q1=0
+    [T1_menu_linU_std] 90,291,565/200,000,000 acc (45%), attempted=114,000,000, acc_rate=0.7920, rate=13231508 acc/s, hits=0, L2=240, L3=240, Q1=0
+    [T1_menu_linU_std] 100,586,837/200,000,000 acc (50%), attempted=127,000,000, acc_rate=0.7920, rate=13226961 acc/s, hits=0, L2=271, L3=271, Q1=0
+    [T1_menu_linU_std] 110,090,989/200,000,000 acc (55%), attempted=139,000,000, acc_rate=0.7920, rate=13134202 acc/s, hits=0, L2=294, L3=294, Q1=0
+    [T1_menu_linU_std] 120,384,409/200,000,000 acc (60%), attempted=152,000,000, acc_rate=0.7920, rate=13072566 acc/s, hits=0, L2=323, L3=323, Q1=0
+    [T1_menu_linU_std] 130,678,937/200,000,000 acc (65%), attempted=165,000,000, acc_rate=0.7920, rate=13027474 acc/s, hits=0, L2=351, L3=351, Q1=0
+    [T1_menu_linU_std] 140,182,162/200,000,000 acc (70%), attempted=177,000,000, acc_rate=0.7920, rate=13047862 acc/s, hits=0, L2=374, L3=374, Q1=0
+    [T1_menu_linU_std] 150,479,557/200,000,000 acc (75%), attempted=190,000,000, acc_rate=0.7920, rate=13060435 acc/s, hits=0, L2=398, L3=398, Q1=0
+    [T1_menu_linU_std] 160,774,863/200,000,000 acc (80%), attempted=203,000,000, acc_rate=0.7920, rate=13046153 acc/s, hits=0, L2=422, L3=422, Q1=0
+    [T1_menu_linU_std] 170,279,654/200,000,000 acc (85%), attempted=215,000,000, acc_rate=0.7920, rate=13051429 acc/s, hits=0, L2=445, L3=445, Q1=0
+    [T1_menu_linU_std] 180,578,277/200,000,000 acc (90%), attempted=228,000,000, acc_rate=0.7920, rate=13080368 acc/s, hits=0, L2=475, L3=475, Q1=0
+    [T1_menu_linU_std] 190,078,071/200,000,000 acc (95%), attempted=240,000,000, acc_rate=0.7920, rate=13083061 acc/s, hits=0, L2=497, L3=497, Q1=0
+    [T1_menu_linU_std] 200,372,421/200,000,000 acc (100%), attempted=253,000,000, acc_rate=0.7920, rate=13082632 acc/s, hits=0, L2=512, L3=512, Q1=0
+  DONE [T1_menu_linU_std]: hits=0, N_accepted=200,372,421, attempted=253,000,000, f=0.000000e+00, CP95=[0.000000e+00,1.841012e-08], acc_rate=0.7920, 15s
+  -> BOUND: f=0.000000e+00 CP95=[0.000000e+00,1.841012e-08], acc_rate=0.7920
+
+────────────────────────────────────────────────────────────
+CELL 7/8: T1_fixed_logU_alt
+  N_accepted=200,000,000  seed=2118848253
+────────────────────────────────────────────────────────────
+  Cascade order (rarest first): ['L2', 'L3', 'Q1', 'Q2', 'U1_fixed']
+    [T1_fixed_logU_alt] 10,000,000/200,000,000 acc (5%), attempted=10,000,000, acc_rate=1.0000, rate=13633522 acc/s, hits=0, L2=12, L3=12, Q1=0
+    [T1_fixed_logU_alt] 20,000,000/200,000,000 acc (10%), attempted=20,000,000, acc_rate=1.0000, rate=13990037 acc/s, hits=0, L2=32, L3=32, Q1=0
+    [T1_fixed_logU_alt] 30,000,000/200,000,000 acc (15%), attempted=30,000,000, acc_rate=1.0000, rate=13705117 acc/s, hits=0, L2=58, L3=58, Q1=0
+    [T1_fixed_logU_alt] 40,000,000/200,000,000 acc (20%), attempted=40,000,000, acc_rate=1.0000, rate=13781082 acc/s, hits=0, L2=84, L3=84, Q1=0
+    [T1_fixed_logU_alt] 50,000,000/200,000,000 acc (25%), attempted=50,000,000, acc_rate=1.0000, rate=13923853 acc/s, hits=0, L2=112, L3=112, Q1=0
+    [T1_fixed_logU_alt] 60,000,000/200,000,000 acc (30%), attempted=60,000,000, acc_rate=1.0000, rate=13984034 acc/s, hits=0, L2=128, L3=128, Q1=0
+    [T1_fixed_logU_alt] 70,000,000/200,000,000 acc (35%), attempted=70,000,000, acc_rate=1.0000, rate=14070676 acc/s, hits=0, L2=151, L3=151, Q1=0
+    [T1_fixed_logU_alt] 80,000,000/200,000,000 acc (40%), attempted=80,000,000, acc_rate=1.0000, rate=14171724 acc/s, hits=0, L2=168, L3=168, Q1=0
+    [T1_fixed_logU_alt] 90,000,000/200,000,000 acc (45%), attempted=90,000,000, acc_rate=1.0000, rate=14217874 acc/s, hits=0, L2=192, L3=192, Q1=0
+    [T1_fixed_logU_alt] 100,000,000/200,000,000 acc (50%), attempted=100,000,000, acc_rate=1.0000, rate=14226136 acc/s, hits=0, L2=219, L3=219, Q1=0
+    [T1_fixed_logU_alt] 110,000,000/200,000,000 acc (55%), attempted=110,000,000, acc_rate=1.0000, rate=14290172 acc/s, hits=0, L2=243, L3=243, Q1=0
+    [T1_fixed_logU_alt] 120,000,000/200,000,000 acc (60%), attempted=120,000,000, acc_rate=1.0000, rate=14358614 acc/s, hits=0, L2=262, L3=262, Q1=0
+    [T1_fixed_logU_alt] 130,000,000/200,000,000 acc (65%), attempted=130,000,000, acc_rate=1.0000, rate=14345253 acc/s, hits=0, L2=282, L3=282, Q1=1
+    [T1_fixed_logU_alt] 140,000,000/200,000,000 acc (70%), attempted=140,000,000, acc_rate=1.0000, rate=14373667 acc/s, hits=0, L2=301, L3=301, Q1=1
+    [T1_fixed_logU_alt] 150,000,000/200,000,000 acc (75%), attempted=150,000,000, acc_rate=1.0000, rate=14418824 acc/s, hits=0, L2=328, L3=328, Q1=1
+    [T1_fixed_logU_alt] 160,000,000/200,000,000 acc (80%), attempted=160,000,000, acc_rate=1.0000, rate=14437671 acc/s, hits=0, L2=353, L3=353, Q1=1
+    [T1_fixed_logU_alt] 170,000,000/200,000,000 acc (85%), attempted=170,000,000, acc_rate=1.0000, rate=14461837 acc/s, hits=0, L2=371, L3=371, Q1=1
+    [T1_fixed_logU_alt] 180,000,000/200,000,000 acc (90%), attempted=180,000,000, acc_rate=1.0000, rate=14481325 acc/s, hits=0, L2=392, L3=392, Q1=1
+    [T1_fixed_logU_alt] 190,000,000/200,000,000 acc (95%), attempted=190,000,000, acc_rate=1.0000, rate=14462132 acc/s, hits=0, L2=414, L3=414, Q1=1
+    [T1_fixed_logU_alt] 200,000,000/200,000,000 acc (100%), attempted=200,000,000, acc_rate=1.0000, rate=14445451 acc/s, hits=0, L2=434, L3=434, Q1=1
+  DONE [T1_fixed_logU_alt]: hits=0, N_accepted=200,000,000, attempted=200,000,000, f=0.000000e+00, CP95=[0.000000e+00,1.844440e-08], acc_rate=1.0000, 14s
+  -> BOUND: f=0.000000e+00 CP95=[0.000000e+00,1.844440e-08], acc_rate=1.0000
+
+────────────────────────────────────────────────────────────
+CELL 8/8: T1_menu_logU_alt
+  N_accepted=200,000,000  seed=1599768764
+────────────────────────────────────────────────────────────
+  Cascade order (rarest first): ['L2', 'L3', 'Q1', 'Q2', 'U1_menu']
+    [T1_menu_logU_alt] 10,000,000/200,000,000 acc (5%), attempted=10,000,000, acc_rate=1.0000, rate=13655187 acc/s, hits=0, L2=18, L3=18, Q1=0
+    [T1_menu_logU_alt] 20,000,000/200,000,000 acc (10%), attempted=20,000,000, acc_rate=1.0000, rate=14036312 acc/s, hits=0, L2=37, L3=37, Q1=0
+    [T1_menu_logU_alt] 30,000,000/200,000,000 acc (15%), attempted=30,000,000, acc_rate=1.0000, rate=14188837 acc/s, hits=0, L2=60, L3=60, Q1=0
+    [T1_menu_logU_alt] 40,000,000/200,000,000 acc (20%), attempted=40,000,000, acc_rate=1.0000, rate=14182877 acc/s, hits=0, L2=87, L3=87, Q1=0
+    [T1_menu_logU_alt] 50,000,000/200,000,000 acc (25%), attempted=50,000,000, acc_rate=1.0000, rate=14208280 acc/s, hits=0, L2=106, L3=106, Q1=0
+    [T1_menu_logU_alt] 60,000,000/200,000,000 acc (30%), attempted=60,000,000, acc_rate=1.0000, rate=14328065 acc/s, hits=0, L2=129, L3=129, Q1=0
+    [T1_menu_logU_alt] 70,000,000/200,000,000 acc (35%), attempted=70,000,000, acc_rate=1.0000, rate=14337827 acc/s, hits=0, L2=151, L3=151, Q1=0
+    [T1_menu_logU_alt] 80,000,000/200,000,000 acc (40%), attempted=80,000,000, acc_rate=1.0000, rate=14370592 acc/s, hits=0, L2=170, L3=170, Q1=0
+    [T1_menu_logU_alt] 90,000,000/200,000,000 acc (45%), attempted=90,000,000, acc_rate=1.0000, rate=14327368 acc/s, hits=0, L2=194, L3=194, Q1=0
+    [T1_menu_logU_alt] 100,000,000/200,000,000 acc (50%), attempted=100,000,000, acc_rate=1.0000, rate=14354738 acc/s, hits=0, L2=220, L3=220, Q1=0
+    [T1_menu_logU_alt] 110,000,000/200,000,000 acc (55%), attempted=110,000,000, acc_rate=1.0000, rate=14370069 acc/s, hits=0, L2=247, L3=247, Q1=0
+    [T1_menu_logU_alt] 120,000,000/200,000,000 acc (60%), attempted=120,000,000, acc_rate=1.0000, rate=14402622 acc/s, hits=0, L2=265, L3=265, Q1=0
+    [T1_menu_logU_alt] 130,000,000/200,000,000 acc (65%), attempted=130,000,000, acc_rate=1.0000, rate=14424043 acc/s, hits=0, L2=293, L3=293, Q1=0
+    [T1_menu_logU_alt] 140,000,000/200,000,000 acc (70%), attempted=140,000,000, acc_rate=1.0000, rate=14384956 acc/s, hits=0, L2=313, L3=313, Q1=0
+    [T1_menu_logU_alt] 150,000,000/200,000,000 acc (75%), attempted=150,000,000, acc_rate=1.0000, rate=14404662 acc/s, hits=0, L2=329, L3=329, Q1=0
+    [T1_menu_logU_alt] 160,000,000/200,000,000 acc (80%), attempted=160,000,000, acc_rate=1.0000, rate=14447718 acc/s, hits=0, L2=346, L3=346, Q1=0
+    [T1_menu_logU_alt] 170,000,000/200,000,000 acc (85%), attempted=170,000,000, acc_rate=1.0000, rate=14474458 acc/s, hits=0, L2=361, L3=361, Q1=0
+    [T1_menu_logU_alt] 180,000,000/200,000,000 acc (90%), attempted=180,000,000, acc_rate=1.0000, rate=14456757 acc/s, hits=0, L2=389, L3=389, Q1=0
+    [T1_menu_logU_alt] 190,000,000/200,000,000 acc (95%), attempted=190,000,000, acc_rate=1.0000, rate=14434171 acc/s, hits=0, L2=419, L3=419, Q1=0
+    [T1_menu_logU_alt] 200,000,000/200,000,000 acc (100%), attempted=200,000,000, acc_rate=1.0000, rate=14401537 acc/s, hits=0, L2=442, L3=442, Q1=0
+  DONE [T1_menu_logU_alt]: hits=0, N_accepted=200,000,000, attempted=200,000,000, f=0.000000e+00, CP95=[0.000000e+00,1.844440e-08], acc_rate=1.0000, 14s
+  -> BOUND: f=0.000000e+00 CP95=[0.000000e+00,1.844440e-08], acc_rate=1.0000
+
+======================================================================
+V0.3 TIER-1 PRODUCTION COMPLETE — 439s total
+======================================================================
+
+Cell                               Hits          N_acc            f                           CP95  AccRate     Type
+--------------------------------------------------------------------------------------------------------------
+  T1_fixed_linU_std                   0    200,369,394 0.000000e+00        [0.0000e+00,1.8410e-08]   0.7920    BOUND
+  T1_fixed_logN_std                   0    200,362,463 0.000000e+00        [0.0000e+00,1.8411e-08]   0.7919    BOUND
+  T1_fixed_logU_alt                   0    200,000,000 0.000000e+00        [0.0000e+00,1.8444e-08]   1.0000    BOUND
+  T1_fixed_logU_std                   0  2,000,521,018 0.000000e+00        [0.0000e+00,1.8440e-09]   0.7920    BOUND
+  T1_menu_linU_std                    0    200,372,421 0.000000e+00        [0.0000e+00,1.8410e-08]   0.7920    BOUND
+  T1_menu_logN_std                    0    200,367,790 0.000000e+00        [0.0000e+00,1.8411e-08]   0.7920    BOUND
+  T1_menu_logU_alt                    0    200,000,000 0.000000e+00        [0.0000e+00,1.8444e-08]   1.0000    BOUND
+  T1_menu_logU_std                    0  2,000,514,436 0.000000e+00        [0.0000e+00,1.8440e-09]   0.7920    BOUND
+
+  HEADLINE (most conservative): T1_menu_logU_std
+  f < 1.843965e-09 (CP95 upper bound, 0 hits in 2,000,514,436 accepted worlds)
+
+  Acceptance rates:
+    T1_fixed_linU_std              0.7920
+    T1_fixed_logN_std              0.7919
+    T1_fixed_logU_alt              1.0000
+    T1_fixed_logU_std              0.7920
+    T1_menu_linU_std               0.7920
+    T1_menu_logN_std               0.7920
+    T1_menu_logU_alt               1.0000
+    T1_menu_logU_std               0.7920
+
+  Artifacts:
+    Summary: results/amb-v0.3/tier1_summary_v0.3.json
+    Cell results: results/amb-v0.3/cell_*.json
+    Singletons: results/amb-v0.3/singletons_T1_logU_v0.3.json
+    Spec hash: 330bb1c7dceb278479b1bac1bdc2a672fd731508eb86b70799917e40290aa2ad
+
+======================================================================
+DONE — engine v0.3
+======================================================================
+
+GATE SUMMARY:
+  G1 (golden regression): PASS OK
+  G2 (T1 L1 = 1.000000):  PASS OK
+  G3 (support gates):     PASS OK
