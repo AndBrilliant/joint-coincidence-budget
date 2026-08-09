@@ -312,15 +312,68 @@ def beta_2loop(t, y):
     dyc_2L = TWO_LOOP_FACTOR * yc * (common_2L + gauge_HH_yc + gauge_FDFD_yc + yc_pure + lam_HH_yc)
     dyu_2L = TWO_LOOP_FACTOR * yu * (common_2L + gauge_HH_yu + gauge_FDFD_yu + yu_pure + lam_HH_yu)
 
-    # Down-type and leptons at 2-loop: keep at 1-loop only.
-    # Their 2-loop corrections primarily affect Tr(F_D†F_D) and Tr(F_L†F_L)
-    # inside T, which are suppressed by yb²/yt² ~ 3e-4.
+    # ─── 2-loop DOWN-TYPE Yukawa contributions ──────────────────────────
+    # Extended per specs/SPEC_DRIFT.md: same 2-loop structure from Luo & Xiao
+    # with up↔down swap. The flavor-universal piece (pure_gauge, gauge_traces,
+    # chi4) cancels in Q_inv drift by Euler's theorem. Flavor-differential
+    # coefficients are identical to up-type with (H↔F_D, up↔down partner).
+    #
+    # (B) Gauge × F_D†F_D (self-coupling): same coefficients as up-type gauge×H†H
+    gauge_FDFD_yb = (223.0/80.0)*g1s*ybs + (135.0/16.0)*g2s*ybs + 16.0*g3s*ybs
+    gauge_FDFD_ys = (223.0/80.0)*g1s*yss + (135.0/16.0)*g2s*yss + 16.0*g3s*yss
+    gauge_FDFD_yd = (223.0/80.0)*g1s*yds + (135.0/16.0)*g2s*yds + 16.0*g3s*yds
+
+    # (B') Gauge × H†H (cross-coupling to up partner): same coefficients as up-type gauge×F_D†F_D
+    gauge_HH_yb = -(43.0/80.0)*g1s*yts + (9.0/16.0)*g2s*yts - 16.0*g3s*yts
+    gauge_HH_ys = -(43.0/80.0)*g1s*ycs + (9.0/16.0)*g2s*ycs - 16.0*g3s*ycs
+    gauge_HH_yd = -(43.0/80.0)*g1s*yus + (9.0/16.0)*g2s*yus - 16.0*g3s*yus
+
+    # (D) Pure Yukawa — down-type: swap H↔F_D in up-type expression
+    #   +(3/2)(F_D†F_D)² - (5/4)(F_D†F_D H†H) + (11/4)(H†H)²
+    #   -(9/4)T(F_D†F_D) + (5/4)T(H†H)
+    yb_pure_D = (
+        + (3.0/2.0) * ybs*ybs         # +(3/2) yb⁴
+        - (5.0/4.0) * ybs * yts       # -(5/4) yb² yt²
+        + (11.0/4.0) * yts*yts        # +(11/4) yt⁴
+        - (9.0/4.0) * T * ybs         # -(9/4) T yb²
+        + (5.0/4.0) * T * yts         # +(5/4) T yt²
+    )
+    ys_pure_D = (
+        + (3.0/2.0) * yss*yss
+        - (5.0/4.0) * yss * ycs
+        + (11.0/4.0) * ycs*ycs
+        - (9.0/4.0) * T * yss
+        + (5.0/4.0) * T * ycs
+    )
+    yd_pure_D = (
+        + (3.0/2.0) * yds*yds
+        - (5.0/4.0) * yds * yus
+        + (11.0/4.0) * yus*yus
+        - (9.0/4.0) * T * yds
+        + (5.0/4.0) * T * yus
+    )
+
+    # (E) Higgs quartic λ terms for down-type:
+    #   +(3/2)λ² - 6λ (F_D†F_D)_ii   [same structure as up-type]
+    lam_FDFD_yb = (3.0/2.0)*lam2 - 6.0*lam*ybs
+    lam_FDFD_ys = (3.0/2.0)*lam2 - 6.0*lam*yss
+    lam_FDFD_yd = (3.0/2.0)*lam2 - 6.0*lam*yds
+
+    # Assemble 2-loop down-type: dy_i = y_i × TWO_LOOP_FACTOR × anom_dim
+    # Flavor-universal common_2L is shared with up-type
+    dyb_2L = TWO_LOOP_FACTOR * yb * (common_2L + gauge_FDFD_yb + gauge_HH_yb + yb_pure_D + lam_FDFD_yb)
+    dys_2L = TWO_LOOP_FACTOR * ys * (common_2L + gauge_FDFD_ys + gauge_HH_ys + ys_pure_D + lam_FDFD_ys)
+    dyd_2L = TWO_LOOP_FACTOR * yd * (common_2L + gauge_FDFD_yd + gauge_HH_yd + yd_pure_D + lam_FDFD_yd)
+
+    # Leptons at 2-loop: keep at 1-loop only.
+    # Their 2-loop corrections are suppressed by (y_τ/yt)² ~ 1e-4.
 
     # Total = 1-loop + 2-loop
     return [
         d1[0] + dg1_2L, d1[1] + dg2_2L, d1[2] + dg3_2L,
         d1[3] + dyt_2L, d1[4] + dyc_2L, d1[5] + dyu_2L,
-        d1[6], d1[7], d1[8], d1[9], d1[10], d1[11],
+        d1[6] + dyb_2L, d1[7] + dys_2L, d1[8] + dyd_2L,
+        d1[9], d1[10], d1[11],
     ]
 
 

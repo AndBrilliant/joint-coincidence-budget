@@ -1,0 +1,111 @@
+{
+  "spec": "downtype-drift v1.0",
+  "seed": 20260811,
+  "N_universes": 100000,
+  "Q_inv_MZ_central": 0.66738643,
+  "measured_drift": {
+    "central_pct": -0.064954,
+    "sigma_pct": 0.000655,
+    "central_abs": -0.000433495564,
+    "sigma_abs": 4.372478e-06
+  },
+  "predicted_drift": {
+    "central_pct": -0.073185,
+    "sigma_pct": 0.000696,
+    "central_abs": -0.000488429922,
+    "sigma_abs": 4.64591e-06,
+    "method": "Derived analytic law: dQ_inv/dt from 1-loop flavor-differential beta functions, integrated M_Z \u2192 3 TeV"
+  },
+  "consistency": {
+    "abs_diff_pct": 0.008231,
+    "combined_sigma_pct": 0.000956,
+    "sigma_units": 8.6105
+  },
+  "input_budget": {
+    "propagated": [
+      "yt (0.967 \u00b1 0.004)",
+      "yb (0.01630 \u00b1 0.00009)",
+      "ys (3.06e-4 \u00b1 0.04e-4)",
+      "yd (1.54e-5 \u00b1 0.02e-5)",
+      "yc (3.56e-3 \u00b1 0.06e-3)",
+      "yu (7.04e-6 \u00b1 0.15e-6)",
+      "g1 (0.461228 \u00b1 0.000026)",
+      "g2 (0.65096 \u00b1 0.00004)",
+      "g3 (1.2123 \u00b1 0.0046)"
+    ],
+    "fixed": [
+      "ytau",
+      "ymu",
+      "ye",
+      "CKM = identity (diagonal approximation)"
+    ],
+    "source": "AHS2026 arXiv:2510.01312v2 Eq. 2.4 (2024 PDG input)"
+  },
+  "gate_D1": {
+    "gate": "GATE_D1",
+    "passed": false,
+    "values": {
+      "Q_inv_MZ_computed": 0.667385,
+      "Q_inv_MZ_target": 0.66738,
+      "Q_inv_3TeV_computed": 0.666952,
+      "Q_inv_3TeV_target": 0.66686,
+      "drift_meas_pct": -0.065,
+      "drift_meas_target": -0.078,
+      "drift_pred_pct": -0.0732,
+      "drift_pred_target": -0.06
+    },
+    "checks": {
+      "Q_inv_MZ": true,
+      "Q_inv_3TeV": false,
+      "drift_meas": false,
+      "drift_pred": false
+    }
+  },
+  "gate_D2": {
+    "gate": "GATE_D2",
+    "passed": true,
+    "N_draws": 100000,
+    "N_valid": 100000,
+    "N_failed": 0,
+    "seed": 20260811,
+    "endpoint_bands": {
+      "Q_inv_MZ_central": 0.66738643,
+      "Q_inv_MZ_sigma": 0.0017537023694150086,
+      "Q_inv_3TeV_central": 0.66695294,
+      "Q_inv_3TeV_sigma": 0.0017538975116206748
+    },
+    "drift_band_draw_once": {
+      "central_pct": -0.064954,
+      "sigma_pct": 0.0006551642971655963,
+      "central_abs": -0.00043349556358867133,
+      "sigma_abs": 4.372477633970012e-06
+    },
+    "naive_uncorrelated_sigma_pct": 0.37163591321292494,
+    "correlation_benefit": 567.2407895557104,
+    "predicted_drift": {
+      "central_pct": -0.073185,
+      "sigma_pct": 0.0006961349490713619,
+      "central_abs": -0.000488429922220014,
+      "sigma_abs": 4.645910206352465e-06
+    },
+    "consistency": {
+      "diff_abs_pct": 0.008231,
+      "combined_sigma_pct": 0.000956,
+      "sigma_units": 8.6105
+    },
+    "input_budget": {
+      "propagated_params": [
+        "yt",
+        "yb",
+        "ys",
+        "yd",
+        "yc",
+        "yu",
+        "g1",
+        "g2",
+        "g3"
+      ],
+      "sources": "AHS2026 Eq. 2.4 (2024 PDG input)"
+    }
+  }
+}

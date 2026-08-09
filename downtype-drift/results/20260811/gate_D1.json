@@ -1,0 +1,20 @@
+{
+  "gate": "GATE_D1",
+  "passed": false,
+  "values": {
+    "Q_inv_MZ_computed": 0.667385,
+    "Q_inv_MZ_target": 0.66738,
+    "Q_inv_3TeV_computed": 0.666952,
+    "Q_inv_3TeV_target": 0.66686,
+    "drift_meas_pct": -0.065,
+    "drift_meas_target": -0.078,
+    "drift_pred_pct": -0.0732,
+    "drift_pred_target": -0.06
+  },
+  "checks": {
+    "Q_inv_MZ": true,
+    "Q_inv_3TeV": false,
+    "drift_meas": false,
+    "drift_pred": false
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "gate": "GATE_D2",
+  "passed": true,
+  "N_draws": 100000,
+  "N_valid": 100000,
+  "N_failed": 0,
+  "seed": 20260811,
+  "endpoint_bands": {
+    "Q_inv_MZ_central": 0.66738643,
+    "Q_inv_MZ_sigma": 0.0017537023694150086,
+    "Q_inv_3TeV_central": 0.66695294,
+    "Q_inv_3TeV_sigma": 0.0017538975116206748
+  },
+  "drift_band_draw_once": {
+    "central_pct": -0.064954,
+    "sigma_pct": 0.0006551642971655963,
+    "central_abs": -0.00043349556358867133,
+    "sigma_abs": 4.372477633970012e-06
+  },
+  "naive_uncorrelated_sigma_pct": 0.37163591321292494,
+  "correlation_benefit": 567.2407895557104,
+  "predicted_drift": {
+    "central_pct": -0.073185,
+    "sigma_pct": 0.0006961349490713619,
+    "central_abs": -0.000488429922220014,
+    "sigma_abs": 4.645910206352465e-06
+  },
+  "consistency": {
+    "diff_abs_pct": 0.008231,
+    "combined_sigma_pct": 0.000956,
+    "sigma_units": 8.6105
+  },
+  "input_budget": {
+    "propagated_params": [
+      "yt",
+      "yb",
+      "ys",
+      "yd",
+      "yc",
+      "yu",
+      "g1",
+      "g2",
+      "g3"
+    ],
+    "sources": "AHS2026 Eq. 2.4 (2024 PDG input)"
+  }
+}
