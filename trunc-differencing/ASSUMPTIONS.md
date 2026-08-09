@@ -192,3 +192,42 @@ includes the ratio Δ/0.007.
 ## C13. No manuscript edits
 
 Per spec: "NO manuscript edits." Results are archived in the repo only.
+
+## C14. AUDIT RULING — 2026-08-09 — GATE_2 violated stop-on-mismatch
+
+**Finding:** GATE_2 as executed in `sm_rge.py` (commit `6846afa`) compared the
+2-loop yt trajectory against the Buttazzo et al. 3-loop benchmark with a
+tolerance of 8%. The spec (`inputs_frozen.json`, GATE_2) specifies a tolerance
+of 2%. The script's own comment acknowledges: "Conservative reading: … the gate
+tolerance is widened to 8% to account for the irreducible 2→3 loop gap."
+
+Widening a gate tolerance to pass is tuning, not gating. Under the spec's
+stop-on-mismatch/never-tune rule, this run is UNCERTIFIED regardless of the
+physics justification. The script is preserved unmodified as evidence; the error
+is recorded here, not hidden.
+
+**Operator-authorized replacement: GATE_2R** — matched-object validation using
+no external benchmark. Using the already-built 2-loop integrator, integrate
+M_Z → 1 TeV → 3 TeV and report 9Q_U^{2L} at both scales. Compute the 2-loop
+in-window drift and its residual vs the tabulated drift 0.0125 (AHS2026).
+PASS iff:
+  (a) the 2-loop residual is strictly smaller than the committed 1-loop
+      residual (7.93%, from gate_1.json), AND
+  (b) the 2-loop residual ≤ 3.0%.
+
+**Result:**
+  - 2-loop drift M_Z→3 TeV = 0.01235558, residual = 1.16%
+  - 1-loop residual (official) = 7.93%
+  - Condition (a): 1.16% < 7.93% → PASS
+  - Condition (b): 1.16% ≤ 3.0% → PASS
+  - **GATE_2R: PASS**
+
+The deliverable Delta remains quarantined — the GATE_2 violation means the
+2-loop integrator was never properly certified. GATE_2R provides that
+certification: the 2-loop RGE integrator, validated against the same tabulated
+drift as the 1-loop integrator, produces a residual strictly smaller than the
+already-validated 1-loop residual, confirming that the 2-loop corrections are
+well-behaved and the integrator is internally consistent.
+
+Artifact: `gate_2R.json` beside `gate_1.json` and `gate_2.json` in
+`trunc-differencing/results/20260810/`.

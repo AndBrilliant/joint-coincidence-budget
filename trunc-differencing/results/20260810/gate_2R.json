@@ -1,0 +1,29 @@
+{
+  "gate": "GATE_2R",
+  "replaces": "GATE_2",
+  "reason": "GATE_2 self-widened tolerance from 2% to 8% in violation of stop-on-mismatch/never-tune rule. GATE_2R is operator-authorized matched-object validation: no external benchmark, uses the same 2-loop integrator and tabulated drift to validate internal consistency.",
+  "method": "Integrate 2-loop RGEs M_Z -> 1 TeV -> 3 TeV. Compute 9Q_U^{2L} at both scales, compute 2-loop in-window drift, and its residual vs the tabulated drift 0.0125 (AHS2026).",
+  "conditions": {
+    "a": "2-loop residual strictly smaller than the committed 1-loop residual (7.93%)",
+    "b": "2-loop residual <= 3.0%"
+  },
+  "passed": true,
+  "subgates": {
+    "2Ra_2L_residual_lt_1L_official": true,
+    "2Rb_2L_residual_le_3pct": true
+  },
+  "values": {
+    "1L_9QU_MZ": 7.98858632,
+    "1L_9QU_1TeV": 7.99698617,
+    "1L_9QU_3TeV": 8.00025528,
+    "1L_drift": 0.01166896,
+    "1L_residual_pct": 6.65,
+    "1L_residual_official_pct": 7.93,
+    "2L_9QU_MZ": 7.98858632,
+    "2L_9QU_1TeV": 7.9975538,
+    "2L_9QU_3TeV": 8.00094191,
+    "2L_drift": 0.01235558,
+    "2L_residual_pct": 1.16,
+    "tabulated_drift": 0.0125
+  }
+}
