@@ -1,0 +1,10 @@
+{
+  "gate": "S2",
+  "description": "1-loop spread must exceed 2-loop spread (convergence)",
+  "passed": true,
+  "spread_1L": 0.0005425223043893368,
+  "spread_2L": 0.0004957173615665056,
+  "ratio_2L_over_1L": 0.9137271547286616,
+  "finding": null,
+  "quick_mode": true
+}

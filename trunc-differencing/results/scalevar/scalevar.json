@@ -1,0 +1,43 @@
+{
+  "spec": "scale-variation v1.0",
+  "method": "boundary-scale variation",
+  "description": "Truncation uncertainty from residual dependence on the scale where the M_Z boundary condition is imposed",
+  "mu0_values_GeV": [
+    45.5938,
+    91.1876,
+    182.3752
+  ],
+  "target_scale_GeV": 1e+16,
+  "nine_Q_U": {
+    "1L": {
+      "mu0_45.6_GeV": 8.042400754925847,
+      "mu0_91.2_GeV": 8.041858232621458,
+      "mu0_182.4_GeV": 8.041858232622575
+    },
+    "2L": {
+      "mu0_45.6_GeV": 8.04154997145164,
+      "mu0_91.2_GeV": 8.041054254090074,
+      "mu0_182.4_GeV": 8.04105425409234
+    }
+  },
+  "spreads": {
+    "1L": 0.0005425223043893368,
+    "2L": 0.0004957173615665056
+  },
+  "comparison_against_successive_order": {
+    "successive_order_delta": 0.000804651113,
+    "scale_variation_spread_2L": 0.0004957173615665056,
+    "ratio": 0.6160649672356889,
+    "source_of_delta": "trunc-differencing/results/20260810/deliverable.json"
+  },
+  "gates": {
+    "S1": {
+      "passed": true
+    },
+    "S2": {
+      "passed": true,
+      "finding": null
+    }
+  },
+  "quick_mode": true
+}

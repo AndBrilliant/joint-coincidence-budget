@@ -1,0 +1,19 @@
+{
+  "gate": "S1",
+  "description": "mu0=M_Z reproduction of archived 9Q_U to 1e-6",
+  "passed": true,
+  "tolerance": 1e-06,
+  "archived": {
+    "9Q_1L": 8.041858,
+    "9Q_2L": 8.041054
+  },
+  "computed": {
+    "9Q_1L": 8.041858232621458,
+    "9Q_2L": 8.041054254090074
+  },
+  "err": {
+    "1L": 2.3262145809610502e-07,
+    "2L": 2.5409007342602763e-07
+  },
+  "quick_mode": true
+}
