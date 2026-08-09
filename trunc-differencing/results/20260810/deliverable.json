@@ -1,0 +1,20 @@
+{
+  "spec": "trunc-differencing v1.0",
+  "seed": 20260810,
+  "endpoint_scale_GeV": 1e+16,
+  "nine_Q_U_1L": 8.04185823,
+  "nine_Q_U_2L": 8.04105358,
+  "Delta": 0.000804651113,
+  "prior_heuristic": 0.007,
+  "ratio_Delta_over_heuristic": 0.11495,
+  "yukawas_1L_1e16": {
+    "yt": 0.44192435,
+    "yc": 0.001440012,
+    "yu": 2.84766e-06
+  },
+  "yukawas_2L_1e16": {
+    "yt": 0.41710557,
+    "yc": 0.001361707,
+    "yu": 2.692809e-06
+  }
+}
