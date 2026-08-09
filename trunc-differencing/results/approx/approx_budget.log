@@ -1,0 +1,92 @@
+========================================================================
+APPROXIMATION-ERROR BUDGET — SPEC_APPROX.md v1.0
+M_Z=91.1876 GeV → μ=1.0e+16 GeV
+Output: /home/Drew/joint-coincidence-budget/trunc-differencing/results/approx
+========================================================================
+
+========================================================================
+GATE A0 — BASELINE REPRODUCTION
+========================================================================
+  ✓ 1-loop baseline: 71 steps in 0.0s, final t=32.3284
+  ✓ 2-loop baseline: 71 steps in 0.0s, final t=32.3284
+  9Q_U^1L(1e16) = 8.04185823  (archived: 8.041858, Δ=2.33e-07)
+  9Q_U^2L(1e16) = 8.04105425  (archived: 8.041054, Δ=2.54e-07)
+  Delta = |diff| = 8.039785e-04
+  Tolerance: 1e-05
+  GATE A0: ✅ PASS
+
+------------------------------------------------------------------------
+A1 — DIAGONAL CKM
+------------------------------------------------------------------------
+  ISOLATION: replaces diagonal F_D†F_D with CKM-rotated F_D†F_D in
+  2-loop Yukawa anomalous dimensions. 1-loop unchanged. Gauge 2-loop unchanged.
+  ✓ 2-loop CKM: 71 steps in 0.0s, final t=32.3284
+  9Q_U^2L(CKM)     = 8.04105426
+  9Q_U^2L(baseline) = 8.04105425
+  delta_A1 = 1.665329e-09  (0.0002% of Delta)
+
+------------------------------------------------------------------------
+A2 — SPECTATOR YUKAWAS AT 2 LOOP
+------------------------------------------------------------------------
+  ISOLATION: adds 2-loop terms for ytau, ymu, ye. Up-type and down-type
+  2-loop unchanged. Gauge 2-loop unchanged. 1-loop unchanged.
+  ✓ 2-loop +lepton2L: 71 steps in 0.0s, final t=32.3284
+  9Q_U^2L(+lep2L)  = 8.04105420
+  9Q_U^2L(baseline) = 8.04105425
+  delta_A2 = 5.079706e-08  (0.0063% of Delta)
+
+------------------------------------------------------------------------
+A3 — STATIC vs RUNNING LAMBDA
+------------------------------------------------------------------------
+  ISOLATION: adds lambda as dynamical variable with 1-loop RGE.
+  Lambda enters 2-loop Yukawa terms. All other beta functions unchanged.
+  ✓ 2-loop +run λ: 120 steps in 0.0s, final t=32.3284
+  λ(M_Z) = 0.1260, λ(1e16) = 2.900625
+  9Q_U^2L(run λ)   = 8.04080739
+  9Q_U^2L(baseline) = 8.04105425
+  delta_A3 = 2.468653e-04  (30.7055% of Delta)
+
+------------------------------------------------------------------------
+A4 — GAUGE SECTOR ORDER
+------------------------------------------------------------------------
+  Both gauge and Yukawa sectors run at 2-loop in baseline.
+  No mismatch to price. delta_A4 = 0. N/A with reason.
+
+========================================================================
+GATE A5 — VARIANT ISOLATION
+========================================================================
+  A1: isolated — differs from baseline ONLY in named approximation
+  A2: isolated — differs from baseline ONLY in named approximation
+  A3: isolated — differs from baseline ONLY in named approximation
+  A4: N/A (no code change)
+  GATE A5: ✅ PASS
+
+========================================================================
+COMBINATION
+========================================================================
+
+  Delta = |9Q_U^2L - 9Q_U^1L| = 8.039785e-04
+
+  Table: Approximation errors on 9Q_U at 1e16 GeV
+  Approximation                           delta  fraction of Delta
+  ------------------------------ -------------- ------------------
+  A1: Diagonal CKM                 1.665329e-09           0.000002
+  A2: Spectator 2L                 5.079706e-08           0.000063
+  A3: Static lambda                2.468653e-04           0.307055
+  A4: Gauge sector order                0 (N/A)                  0
+
+  approximation_error (quadrature) = 2.468654e-04
+  approximation_error (linear sum)  = 2.469178e-04
+  truncation_total = sqrt(Delta² + approx_err²) = 8.410255e-04
+
+  Discriminator ratios (overshoot = 0.042):
+  R_ind (param=0.010) = 4.185225
+  R_con (param=0.014) = 2.994601
+
+  Judgment: truncation_total is dominated by omitted orders (Delta)
+
+  📀 deliverable → /home/Drew/joint-coincidence-budget/trunc-differencing/results/approx/approx_budget.json
+
+========================================================================
+DONE. All artifacts in /home/Drew/joint-coincidence-budget/trunc-differencing/results/approx
+========================================================================

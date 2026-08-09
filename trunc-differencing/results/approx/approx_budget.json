@@ -1,0 +1,58 @@
+{
+  "spec": "SPEC_APPROX.md v1.0",
+  "date": "2026-08-09",
+  "engine": "amb",
+  "machine": "ganymede",
+  "gates": {
+    "A0_baseline_reproduction": {
+      "passed": true,
+      "tolerance": 1e-05,
+      "err_1L": 2.3263186044175654e-07,
+      "err_2L": 2.5411092607896535e-07
+    },
+    "A5_variant_isolation": {
+      "passed": true,
+      "report": {
+        "A1": "ISOLATED",
+        "A2": "ISOLATED",
+        "A3": "ISOLATED",
+        "A4": "N/A"
+      }
+    }
+  },
+  "baseline": {
+    "q9_1L_1e16": 8.04185823263186,
+    "q9_2L_1e16": 8.041054254110927,
+    "Delta": 0.0008039785209330574
+  },
+  "approximations": {
+    "A1_diagonal_CKM": {
+      "delta": 1.6653292078672166e-09,
+      "fraction_of_Delta": 2.071360321833621e-06,
+      "q9_variant": 8.041054255776256
+    },
+    "A2_spectator_2L": {
+      "delta": 5.079705722721428e-08,
+      "fraction_of_Delta": 6.318210736309441e-05,
+      "q9_variant": 8.04105420331387
+    },
+    "A3_static_lambda": {
+      "delta": 0.00013651557874183595,
+      "fraction_of_Delta": 0.1698000321991224,
+      "q9_variant": 8.041190769689669,
+      "lambda_1e16": -0.025977276674485995
+    },
+    "A4_gauge_sector_order": {
+      "delta": 0.0,
+      "reason": "N/A: gauge and Yukawa both at 2-loop"
+    }
+  },
+  "combination": {
+    "approximation_error_quadrature": 0.00013651558820271316,
+    "approximation_error_linear": 0.00013656804112827103,
+    "truncation_total": 0.0008154863382939284,
+    "R_independent_0010": 4.186103893096565,
+    "R_conservative_0014": 2.994923491379976,
+    "dominated_by": "omitted orders (Delta)"
+  }
+}

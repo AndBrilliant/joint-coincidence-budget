@@ -1,0 +1,10 @@
+{
+  "gate": "A5",
+  "passed": true,
+  "isolation": {
+    "A1": "ISOLATED",
+    "A2": "ISOLATED",
+    "A3": "ISOLATED",
+    "A4": "N/A"
+  }
+}
